@@ -1,0 +1,477 @@
+FINWERT WEBSITE REDESIGN - PAGE CONTENT PLAN
+================================================
+
+Source website reviewed:
+https://finwert.com/
+
+Brand positioning:
+Finwert is a one-stop business consulting firm for Finance, Compliance,
+Accounting, Fundraising and Corporate Services. The new website should feel
+professional, trustworthy, modern and growth-focused for startups, SMEs and
+established businesses across India.
+
+
+1. HOME PAGE
+Route: /
+------------------------------------------------
+Sections to show:
+
+1. Header / Navigation
+   - Logo
+   - Home
+   - About Us
+   - Services
+   - Team
+   - PDF Tool
+   - Contact Us
+   - Primary CTA: Schedule a Consultation
+
+2. Hero Banner
+   - Main message: We Provide Solutions To Grow Your Business
+   - Supporting message: One-stop solutions for Finance, Compliance,
+     Accounting and Business Growth.
+   - CTA buttons: Explore Services / Talk to an Expert
+   - Trust points: 15+ Years Experience, PAN India Support, Practical Advice
+
+3. Key Service Highlights
+   - Startup Solutions
+   - Virtual CFO Services
+   - Capital Market, Fundraising & IPO Advisory
+   - Accounting & Financial Services
+   - Debt Fundraising
+
+4. About Finwert Preview
+   - Short company introduction
+   - 15+ years of partner experience
+   - Mumbai and Bangalore presence
+   - PAN India support
+   - CTA: Know More About Us
+
+5. Finance Expertise / At a Glance
+   - Startup Advisory
+   - Virtual CFO
+   - Accounting and MIS
+   - Debt and Equity Capital
+   - Tax and Compliance
+   - Legal and Secretarial Support
+
+6. Complete Services Grid
+   - Startup Solutions
+   - Virtual CFO Services
+   - Capital Market, Fundraising & IPO Advisory
+   - Accounting & Financial Services
+   - Due Diligence
+   - Legal & Secretarial Services
+   - Tax Advisory Services
+   - Corporate Services
+
+7. Why Choose Finwert
+   - One-stop business support
+   - Experienced CA / finance leadership
+   - Tailored solutions
+   - Technology-enabled reporting
+   - Compliance-focused execution
+   - Long-term business partnership
+
+8. How We Work
+   - Understand & Assess
+   - Plan & Advise
+   - Execute & Support
+   - Review & Improve
+
+9. Team Preview
+   - Partner profiles
+   - Expertise tags
+   - CTA: Meet Our Team
+
+10. Final CTA
+   - Talk to our consultants and take the next step.
+   - CTA: Schedule a Consultation
+
+11. Footer
+   - Short company description
+   - Quick links
+   - Service links
+   - Contact details
+   - Social links
+   - Privacy Policy / Terms
+
+
+2. ABOUT US PAGE
+Route: /about
+------------------------------------------------
+Sections to show:
+
+1. About Hero
+   - Heading: Empowering Business & Finance
+   - Short introduction and CTA
+
+2. Who We Are
+   - Business consulting firm
+   - Finance, Compliance, Accounting and Secretarial support
+   - Startup and growth-stage business focus
+   - PAN India service coverage
+
+3. Experience Snapshot
+   - 15+ Years Consulting Experience
+   - Mumbai and Bangalore presence
+   - 75+ tech-savvy professionals (only if this figure is still current)
+
+4. What We Help Businesses Achieve
+   - Increased efficiency
+   - Strategic planning
+   - Better financial management
+   - Stronger compliance
+   - Sustainable growth
+
+5. Our Core Strengths
+   - Financial intelligence
+   - Practical execution
+   - Experienced leadership
+   - Technology-enabled systems
+   - Client-first service
+
+6. Benefits of Working With Finwert
+   - Roadmap for financial goals
+   - Growth, risk and cost-control strategy
+   - Tailored advice
+   - Tax planning and compliance support
+   - Budgeting, cash-flow and funding planning
+
+7. Leadership Preview
+   - Ronak N. Dharnidharka, Partner / CA
+   - Pratik M. Choudhary, Partner / CA
+   - CTA: Meet Our Team
+
+8. CTA: Build a Stronger Financial Future
+
+
+3. SERVICES PAGE
+Route: /services
+------------------------------------------------
+Sections to show:
+
+1. Services Hero
+   - Heading: Smart Financial Solutions To Drive Growth
+   - Supporting copy about integrated business support
+
+2. Services Overview Grid
+   - Startup Solutions
+   - Virtual CFO Services
+   - Capital Market, Fundraising & IPO Advisory Services
+   - Accounting & Financial Services
+   - Due Diligence
+   - Legal & Secretarial Services
+   - Tax Advisory Services
+   - Corporate Services
+
+3. Service Detail Cards
+   Each card should include:
+   - Service title
+   - Business problem solved
+   - 3 to 5 key deliverables
+   - Suitable business type
+   - Learn More CTA
+
+4. Why Choose Our Services
+   - Integrated finance and compliance support
+   - Experienced professionals
+   - Scalable support for startups and SMEs
+   - Practical, measurable advice
+
+5. Final CTA: Find the Right Solution for Your Business
+
+
+4. TEAM PAGE
+Route: /team
+------------------------------------------------
+Sections to show:
+
+1. Team Hero
+   - Heading: Experienced Partners. Practical Advice.
+
+2. Leadership Profiles
+   - Ronak N. Dharnidharka - Partner / Chartered Accountant
+     Expertise: Accounts, Audit, Budgeting, MIS, Taxation, Compliance,
+     Payroll and Virtual CFO support.
+   - Pratik M. Choudhary - Partner / Chartered Accountant
+     Expertise: Startups, closely held companies, Accounts, Audit,
+     Budgeting, MIS, Taxation, Compliance and legal documentation.
+   - Vikesh Agrawal - Partner
+     Expertise: Virtual CFO, financial planning, fundraising, investor
+     relations, compliance, audits and due diligence.
+
+3. Team Expertise Strip
+   - Finance
+   - Fundraising
+   - Tax and Compliance
+   - Accounting and MIS
+   - Corporate Advisory
+
+4. Leadership Philosophy
+   - Clarity in decisions
+   - Integrity in execution
+   - Long-term client relationships
+
+5. CTA: Talk to Our Experts
+
+
+5. CONTACT US PAGE
+Route: /contact
+------------------------------------------------
+Sections to show:
+
+1. Contact Hero
+   - Heading: Let's Discuss Your Business Goals
+   - Short supporting copy
+
+2. Contact Information Cards
+   - General queries: info@finwert.com
+   - HR queries: hr@finwert.com
+   - Phone numbers from the approved official contact details
+   - Mumbai office address
+
+3. Enquiry Form
+   - Name
+   - Email
+   - Phone
+   - Company Name
+   - Service Required
+   - Message
+   - Submit button
+
+4. Quick Enquiry Options
+   - Startup advisory
+   - Virtual CFO
+   - Fundraising
+   - Accounting and compliance
+   - Tax advisory
+
+5. Office Location / Map
+   - Mumbai office map
+   - Bangalore / PAN India service note
+
+6. Social Media Links
+
+
+6. CAREER PAGE
+Route: /career
+------------------------------------------------
+Sections to show:
+
+1. Careers Hero
+   - Heading: Build Your Career With Finwert
+   - Message about learning, ownership and professional growth
+
+2. Why Work With Us
+   - Work with finance and business experts
+   - Exposure to startups, SMEs and growing companies
+   - Learning across finance, tax, compliance and advisory
+   - Collaborative and professional work culture
+
+3. Current Opportunities
+   - Startup Solutions
+   - Virtual CFO Services
+   - Accounting & Financial Services
+   - Due Diligence
+   - Legal & Secretarial Services
+   - Tax Advisory Services
+   - Corporate Services
+   - Show location, experience and employment type for every role
+
+4. Application Form
+   - Name
+   - Email
+   - Phone
+   - Position Applied For
+   - Resume Upload
+   - Cover Message
+
+5. HR Contact
+   - hr@finwert.com
+   - Official HR phone number
+
+
+7. VIRTUAL CFO SERVICES PAGE
+Route: /virtual-cfo-services
+------------------------------------------------
+Sections to show:
+
+1. Service Hero
+   - Heading: Virtual CFO Services For Smarter Financial Decisions
+   - CTA: Speak to a Virtual CFO
+
+2. Overview
+   - Part-time / outsourced CFO support
+   - Financial guidance for startups, SMEs and growing businesses
+   - Customized support based on business requirements
+
+3. What a Virtual CFO Handles
+   - Financial planning and advisory
+   - Accounting system setup
+   - Books and records monitoring
+   - Budgeting and MIS reporting
+   - Cash-flow projections
+   - Financial projections
+   - Risk assessment
+   - Debt planning
+   - Compliance monitoring
+
+4. Core Deliverables
+   - Monthly MIS dashboard
+   - Budget vs actual review
+   - Cash-flow forecast
+   - Business performance review
+   - Investor and lender reporting
+   - Audit and year-end support
+
+5. Why Choose a Virtual CFO
+   - Cost-effective
+   - On-demand expertise
+   - Quick integration with the existing team
+   - Better forecasting
+   - Compliance assurance
+
+6. Ideal For
+   - Startups
+   - SMEs
+   - Founder-led businesses
+   - Fundraising-ready companies
+   - Businesses without a full-time CFO
+
+7. CTA: Get Your Financial Control Center
+
+
+8. CAPITAL MARKET, FUNDRAISING & IPO ADVISORY PAGE
+Route: /capital-market-fundraising-services
+------------------------------------------------
+Sections to show:
+
+1. Hero Section
+   - Heading: Helping Businesses Access Strategic Capital With Confidence
+   - Supporting copy for expansion, stability, long-term value and IPO readiness
+
+2. Equity Fundraising
+   - End-to-end fundraising execution
+   - Targeted investor identification
+   - Valuation readiness
+   - Financial modelling
+   - Investment narrative and pitch storytelling
+
+3. IPO Advisory
+   - IPO readiness assessment
+   - Financial and compliance preparation
+   - Listing strategy
+   - Documentation support
+   - Pre-IPO governance advisory
+
+4. Debt Financing
+   - Working capital loans
+   - Term loans and project financing
+   - Bridge funding
+   - Customized funding structures
+
+5. Loan Restructuring & Refinancing
+   - Debt-term assessment
+   - Lender negotiation
+   - Debt restructuring
+   - Refinancing support
+   - Cash-flow optimization
+
+6. Loan Syndication Against Listed Securities
+   - Liquidity without equity dilution
+   - Customized facility structuring
+   - Lender negotiation
+   - Regulatory-aligned execution
+
+7. Why Businesses Choose Finwert
+   - Investor and lender network
+   - End-to-end transaction support
+   - Strategic and compliant approach
+   - Tailored capital structures
+   - Robust financial modelling
+
+8. CTA: Plan Your Next Capital Raise
+
+
+9. PDF TOOL PAGE
+Route: /pdf-tool/
+------------------------------------------------
+Sections to show:
+
+1. PDF Tool Hero
+   - Heading: Simple Tools For Everyday Business Documents
+   - Short explanation of the tool
+
+2. Tool Grid
+   - Merge PDF
+   - Split PDF
+   - Compress PDF
+   - PDF to Word
+   - PDF to Excel
+   - Word to PDF
+   - Excel to PDF
+   - JPG to PDF
+   - PDF to JPG
+   - Rotate PDF
+   - Add Watermark
+   - Protect / Unlock PDF
+
+3. Upload and Processing Area
+   - Drag and drop upload
+   - File selection button
+   - Progress indicator
+   - Download result button
+   - Clear privacy and file deletion message
+
+4. How It Works
+   - Select a tool
+   - Upload your file
+   - Process the document
+   - Download the result
+
+5. Privacy and Security Note
+   - Explain file handling and deletion policy clearly
+
+6. Help / FAQ Section
+   - Supported file types
+   - File size limits
+   - Processing time
+   - Data privacy
+
+
+GLOBAL REQUIREMENTS FOR ALL PAGES
+================================================
+
+- Use the same Finwert brand system: navy, white, blue and subtle gold.
+- Keep typography, buttons, cards and spacing consistent across pages.
+- Add a sticky header and a strong mobile navigation.
+- Use clear CTA buttons: Schedule a Consultation, Talk to an Expert,
+  Explore Services.
+- Use real Finwert contact details only; do not use template or dummy data.
+- Add descriptive image alt text for accessibility and SEO.
+- Add page-specific SEO title, meta description and Open Graph image.
+- Add proper internal links between related services and contact page.
+- Add forms with success and error states.
+- Make phone numbers and email addresses clickable.
+- Keep service descriptions concise on listing pages and detailed on service
+  pages.
+- Add a reusable footer with service links, contact details, legal links and
+  copyright information.
+- Confirm whether the 75+ professional figure and all phone numbers are still
+  current before publishing.
+
+
+RECOMMENDED BUILD ORDER
+================================================
+1. Shared Header, Footer and Contact CTA
+2. Home Page
+3. About Us Page
+4. Services Listing Page
+5. Virtual CFO Service Page
+6. Capital Market / Fundraising / IPO Page
+7. Team Page
+8. Contact Page
+9. Career Page
+10. PDF Tool Page
+
