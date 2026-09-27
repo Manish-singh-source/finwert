@@ -5,78 +5,121 @@ require __DIR__ . '/includes/header.php';
 ?>
 <style>
     .finwert-cofounder-section {
+        --cofounder-ice: #9fd0ff;
         background: #061f58;
         color: #fff;
         position: relative;
         overflow: hidden;
+        isolation: isolate;
     }
     .finwert-cofounder-section::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(120deg, rgba(22, 140, 255, 0.18), rgba(255, 255, 255, 0));
+        z-index: -1;
+        background: linear-gradient(90deg, rgba(4, 24, 70, .96), rgba(6, 31, 88, .88) 45%, rgba(4, 25, 70, .96)), linear-gradient(120deg, rgba(22, 140, 255, .24), transparent 54%);
         pointer-events: none;
     }
     .finwert-cofounder-section .container {
         position: relative;
         z-index: 1;
     }
+    .finwert-cofounder-section .row { --bs-gutter-x: 64px; }
     .finwert-cofounder-panel {
-        padding: 42px;
-        border-left: 5px solid #168cff;
-        background: rgba(255, 255, 255, 0.07);
+        min-height: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 54px 52px;
+        border: 1px solid rgba(159, 208, 255, .78);
+        border-radius: 14px;
+        background: linear-gradient(140deg, rgba(5, 28, 76, .72), rgba(4, 24, 70, .84)), url('assets/img/myimage/finance-cofounder-bg.png') center / cover no-repeat;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, .2);
     }
     .finwert-cofounder-panel span {
         display: inline-block;
         margin-bottom: 18px;
-        color: #9fd0ff;
+        position: relative;
+        color: var(--cofounder-ice);
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0;
+        letter-spacing: 1.5px;
         text-transform: uppercase;
     }
+    .finwert-cofounder-panel span::before,
+    .finwert-cofounder-kicker::before { content: ""; display: inline-block; width: 38px; height: 3px; margin: 0 12px 4px 0; background: var(--cofounder-ice); }
     .finwert-cofounder-panel h2 {
         margin: 0;
         color: #fff;
-        font-size: 44px;
+        position: relative;
+        font-size: clamp(38px, 4vw, 58px);
         font-weight: 700;
-        line-height: 1.28;
+        line-height: 1.18;
         letter-spacing: 0;
     }
+    .finwert-cofounder-panel h2 em { color: var(--cofounder-ice); font-style: normal; }
     .finwert-cofounder-content p {
         margin: 0;
         color: rgba(255, 255, 255, 0.86);
-        font-size: 24px;
+        font-size: clamp(20px, 2vw, 28px);
         font-weight: 500;
-        line-height: 1.65;
+        line-height: 1.45;
+    }
+    .finwert-cofounder-content .finwert-cofounder-kicker {
+        margin-bottom: 20px;
+        color: var(--cofounder-ice);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        line-height: 1.4;
+        text-transform: uppercase;
     }
     .finwert-cofounder-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 32px;
+        gap: 18px;
+        margin-top: 36px;
     }
     .finwert-cofounder-grid a {
         display: flex;
         align-items: center;
-        min-height: 64px;
-        padding: 0 18px;
-        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+        min-height: 106px;
+        gap: 14px;
+        padding: 16px 18px;
+        border: 1px solid rgba(22, 140, 255, .58);
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(18, 73, 154, .5), rgba(4, 29, 78, .72));
         color: #fff;
         font-weight: 700;
         line-height: 1.35;
+        transition: .25s ease;
     }
+    .finwert-cofounder-grid a::before { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(145deg, #1d69d8, #0a3a94); color: #fff; font-family: "Font Awesome 6 Pro" !important; font-size: 18px; font-weight: 900; }
+    .finwert-cofounder-grid a:nth-child(1)::before { content: "\f1ad"; }
+    .finwert-cofounder-grid a:nth-child(2)::before { content: "\f201"; }
+    .finwert-cofounder-grid a:nth-child(3)::before { content: "\f51e"; }
+    .finwert-cofounder-grid a:nth-child(4)::before { content: "\f2b5"; }
+    .finwert-cofounder-grid a:nth-child(5)::before { content: "\f200"; }
+    .finwert-cofounder-grid a:nth-child(6)::before { content: "\f201"; }
+    .finwert-cofounder-grid a::after { display: none; }
     .finwert-cofounder-grid a:hover {
-        background: #168cff;
+        transform: translateY(-4px);
+        border-color: var(--cofounder-ice);
+        background: linear-gradient(135deg, #0e55b8, #082d76);
         color: #fff;
     }
     @media (max-width: 991px) {
-        .finwert-cofounder-panel h2 { font-size: 34px; }
+        .finwert-cofounder-panel { min-height: 360px; }
         .finwert-cofounder-content p { font-size: 20px; }
         .finwert-cofounder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 575px) {
-        .finwert-cofounder-panel { padding: 30px; }
+        .finwert-cofounder-section { padding-top: 58px !important; padding-bottom: 58px !important; }
+        .finwert-cofounder-panel { min-height: 330px; padding: 34px 26px; }
+        .finwert-cofounder-panel h2 { font-size: 38px; }
         .finwert-cofounder-grid { grid-template-columns: 1fr; }
     }
 </style>
@@ -198,11 +241,12 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-5 mb-30">
                     <div class="finwert-cofounder-panel" data-sal="slide-right" data-sal-duration="900">
                         <span>Finance Co-Founder</span>
-                        <h2>We work as your Finance Co-Founder.</h2>
+                        <h2>We work as your <em>Finance Co-Founder.</em></h2>
                     </div>
                 </div>
                 <div class="col-xl-7 mb-30">
                     <div class="finwert-cofounder-content" data-sal="slide-up" data-sal-duration="900">
+                        <p class="finwert-cofounder-kicker">A partner through every milestone</p>
                         <p>We support companies at every stage — from incorporation to stock market listing — and scale our team at the client's evolving needs.</p>
                         <div class="finwert-cofounder-grid">
                             <a href="service-single.php?service=startup-solutions">Incorporation</a>
@@ -367,6 +411,23 @@ Business Value
                     <div class="swiper-wrapper">
                         <!-- single service slide -->
                         <div class="swiper-slide">
+                            <div class="servicebox__item-5">
+                                <div class="servicebox__item-5-content">
+                                    <div class="icon">
+                                        <span><img src="assets/img/corporateconsulting/icon/vl-service-icon-5.3.png" alt=""></span>
+                                    </div>
+                                    <h4 class="title"><a href="service-single.php?service=startup-solutions">Startup Solutions</a></h4>
+                                </div>
+                                <div class="servicebox__item-5-thumb image-anime">
+                                    <img class="w-100" src="assets/img/myimage/01_Startup_Solutions.jpg" alt="Startup solutions">
+                                </div>
+                                <div class="servicebox__item-5-arrow">
+                                    <a href="service-single.php?service=startup-solutions"><span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single service slide -->
+                        <div class="swiper-slide">
                             <!-- single service item -->
                             <div class="servicebox__item-5">
                                 <!-- content block -->
@@ -380,7 +441,7 @@ Business Value
                                 <!-- thumb -->
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.1.png" alt="Virtual CFO advisory">
+                                        src="assets/img/myimage/02_Virtual_CFO_Services.jpg" alt="Virtual CFO advisory">
                                 </div>
                                 <!-- arrow -->
                                 <div class="servicebox__item-5-arrow">
@@ -404,7 +465,7 @@ Business Value
                                 <!-- thumb -->
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.2.png" alt="">
+                                        src="assets/img/myimage/03_Debt_Fundraising.jpg" alt="Debt fundraising">
                                 </div>
                                 <!-- arrow -->
                                 <div class="servicebox__item-5-arrow">
@@ -428,7 +489,7 @@ Business Value
                                 <!-- thumb -->
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.3.png" alt="">
+                                        src="assets/img/myimage/04_Growth_Capital_Fundraising.jpg" alt="Growth capital fundraising">
                                 </div>
                                 <!-- arrow -->
                                 <div class="servicebox__item-5-arrow">
@@ -452,7 +513,7 @@ Business Value
                                 <!-- thumb -->
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.4.png" alt="Accounting and financial services">
+                                        src="assets/img/myimage/05_Accounting_Financial_Services.jpg" alt="Accounting and financial services">
                                 </div>
                                 <!-- arrow -->
                                 <div class="servicebox__item-5-arrow">
@@ -476,7 +537,7 @@ Business Value
                                 <!-- thumb -->
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.1.png" alt="Due diligence advisory">
+                                        src="assets/img/myimage/06_Due_Diligence.jpg" alt="Due diligence advisory">
                                 </div>
                                 <!-- arrow -->
                                 <div class="servicebox__item-5-arrow">
@@ -500,7 +561,7 @@ Business Value
                                 <!-- thumb -->
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.4.png" alt="Tax advisory services">
+                                        src="assets/img/myimage/08_Tax_Advisory_Services.jpg" alt="Tax advisory services">
                                 </div>
                                 <!-- arrow -->
                                 <div class="servicebox__item-5-arrow">
@@ -521,7 +582,7 @@ Business Value
                                 </div>
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.2.png"
+                                        src="assets/img/myimage/07_Legal_Secretarial_Services.jpg"
                                         alt="Legal and secretarial services">
                                 </div>
                                 <div class="servicebox__item-5-arrow">
@@ -541,7 +602,7 @@ Business Value
                                 </div>
                                 <div class="servicebox__item-5-thumb image-anime">
                                     <img class="w-100"
-                                        src="assets/img/corporateconsulting/service/service-thumb-5.3.png"
+                                        src="assets/img/myimage/09_Corporate_Services.jpg"
                                         alt="Corporate business services">
                                 </div>
                                 <div class="servicebox__item-5-arrow">

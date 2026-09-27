@@ -20386,9 +20386,9 @@ p {
 
 .finwert-about-heading .title {
   color: #061f5f !important;
-  font-size: 54px;
+  font-size: 44px;
   font-weight: 900;
-  line-height: 1.18;
+  line-height: 1.22;
 }
 
 .finwert-about-heading .vl-primary-btn {
@@ -20475,7 +20475,7 @@ p {
   }
 
   .finwert-about-heading .title {
-    font-size: 46px;
+    font-size: 40px;
   }
 
   .finwert-about-section .vl_about_content-5 {
@@ -20520,7 +20520,7 @@ p {
   }
 
   .finwert-about-heading .title {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .finwert-about-section .vl_about_content-5 {
@@ -20575,7 +20575,7 @@ p {
   }
 
   .finwert-about-heading .title {
-    font-size: 31px;
+    font-size: 29px;
   }
 
   .finwert-about-heading .vl-primary-btn {
@@ -21507,7 +21507,7 @@ p {
 .corporate-consulting-page .finwert-glance-intro h2,
 .corporate-consulting-page .finwert-service-section .vl-section-title-5 > .title {
   font-family: var(--vkl-family-font1);
-  font-size: var(--vkl-font-size-font-s44);
+  font-size: 40px;
   font-weight: var(--vkl-weight-regular);
   line-height: var(--vkl-specing-height52);
 }

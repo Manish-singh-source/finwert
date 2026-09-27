@@ -21,19 +21,20 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
     .transactions-hero {
         position: relative;
         overflow: hidden;
-        min-height: 620px;
-        display: flex;
-        align-items: center;
-        padding: 150px 0 100px;
-        background: linear-gradient(104deg, rgba(4, 22, 65, .98) 0%, rgba(5, 37, 90, .92) 46%, rgba(8, 62, 126, .38) 100%), url("assets/img/finwert/about/about-main.png") center / cover no-repeat;
+        padding: 72px 0 42px;
+        background: linear-gradient(103deg, rgba(5, 28, 78, .9) 0%, rgba(8, 47, 104, .82) 46%, rgba(8, 62, 126, .62) 100%), url("assets/img/finwert/about/about-main.png") center 42% / cover no-repeat;
     }
-    .transactions-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 7px; background: linear-gradient(90deg, #168cff, #89caff, #fff); }
-    .transactions-hero .container { position: relative; z-index: 1; }
-    .transactions-kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; color: #a8d3ff; font-size: 14px; font-weight: 700; text-transform: uppercase; }
-    .transactions-kicker::before { content: ""; width: 28px; height: 2px; background: #168cff; }
-    .transactions-hero h1 { max-width: 920px; margin: 0; color: #fff; font-size: 64px; font-weight: 700; line-height: 1.18; }
-    .transactions-hero p { max-width: 760px; margin: 26px 0 0; color: rgba(255,255,255,.84); font-size: 19px; line-height: 1.85; }
-    .transactions-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .transactions-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: linear-gradient(90deg, #168cff, #7fc4ff, #fff); }
+    .transactions-hero .container { position: relative; z-index: 1; text-align: center; }
+    .transactions-hero h1 { max-width: 760px; margin: 0 auto; color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; }
+    .transactions-breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; color: rgba(255,255,255,.75); font-size: 14px; }
+    .transactions-breadcrumb a { color: #fff; }
+    .transactions-intro { padding: 82px 0; background: #fff; }
+    .transactions-intro .container { max-width: 900px; text-align: center; }
+    .transactions-intro h2 { margin: 0; color: #061f58; font-size: 42px; font-weight: 700; line-height: 1.3; }
+    .transactions-intro p { margin: 18px auto 0; max-width: 760px; color: #516173; font-size: 17px; line-height: 1.85; }
+    .transactions-hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .transactions-intro .transactions-outline { border-color: #168cff; color: #061f58; }
     .transactions-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 58px; padding: 0 28px; border: 1px solid rgba(255,255,255,.5); color: #fff; font-weight: 700; }
     .transactions-outline:hover { background: #168cff; border-color: #168cff; color: #fff; }
     .transactions-section { padding: 100px 0; }
@@ -73,15 +74,17 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
     .confidential-card h3 { margin: 0; color: #061f58; font-size: 26px; font-weight: 700; line-height: 1.38; }
     .confidential-card p { margin: 14px 0 0; color: #516173; line-height: 1.8; }
     @media (max-width: 1199px) {
-        .transactions-hero h1 { font-size: 58px; }
+        .transactions-hero h1 { font-size: 42px; }
         .transactions-title h2 { font-size: 38px; }
     }
     @media (max-width: 991px) {
         .lifecycle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 767px) {
-        .transactions-hero { min-height: auto; padding: 120px 0 78px; }
-        .transactions-hero h1 { font-size: 40px; line-height: 1.2; }
+        .transactions-hero { padding: 72px 0 48px; }
+        .transactions-hero h1 { font-size: 30px; line-height: 1.24; }
+        .transactions-intro { padding: 68px 0; }
+        .transactions-intro h2 { font-size: 32px; }
         .transactions-section { padding: 70px 0; }
         .transactions-title h2 { font-size: 32px; }
         .lifecycle-grid { grid-template-columns: 1fr; }
@@ -92,9 +95,15 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
 <main class="transactions-page">
     <section class="transactions-hero">
         <div class="container">
-            <span class="transactions-kicker">Transactions</span>
-            <h1>Transaction support for bold capital and strategic decisions.</h1>
-            <p>Finwert supports companies across fundraising, capital structuring, due diligence, M&A preparation, transaction execution, and pre-IPO readiness without publishing unverified client names or deal values.</p>
+            <h1>Transactions</h1>
+            <div class="transactions-breadcrumb"><a href="index.php">Home</a><span>/</span><span>Transactions</span></div>
+        </div>
+    </section>
+
+    <section class="transactions-intro">
+        <div class="container">
+            <h2>Transaction support for bold capital and strategic decisions.</h2>
+            <p>Finwert supports companies across fundraising, capital structuring, due diligence, M&amp;A preparation, transaction execution, and pre-IPO readiness without publishing unverified client names or deal values.</p>
             <div class="transactions-hero-actions">
                 <a href="#categories" class="vl-primary-btn vl-primary-btn-5">Explore Categories <span><img src="assets/img/icon/arrow-right-5.1.svg" alt=""></span></a>
                 <a href="services.php" class="transactions-outline">View Services</a>

@@ -29,16 +29,16 @@ $businessTiers = [
     .services-hero {
         position: relative;
         overflow: hidden;
-        padding: 142px 0 92px;
-        background: linear-gradient(103deg, rgba(5, 28, 78, 0.97) 0%, rgba(8, 47, 104, 0.9) 46%, rgba(8, 62, 126, 0.36) 100%), url("assets/img/finwert/about/about-main.png") center / cover no-repeat;
+        padding: 72px 0 42px;
+        background: linear-gradient(103deg, rgba(5, 28, 78, 0.9) 0%, rgba(8, 47, 104, 0.82) 46%, rgba(8, 62, 126, 0.62) 100%), url("assets/img/myimage/finance-cofounder-bg.png") center 42% / cover no-repeat;
     }
-    .services-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 7px; background: linear-gradient(90deg, #168cff, #7fc4ff, #fff); }
-    .services-hero .container { position: relative; z-index: 1; }
-    .services-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; color: #a8d3ff; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+    .services-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: linear-gradient(90deg, #168cff, #7fc4ff, #fff); }
+    .services-hero .container { position: relative; z-index: 1; text-align: center; }
+    .services-eyebrow { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; color: #a8d3ff; font-size: 13px; font-weight: 600; text-transform: uppercase; }
     .services-eyebrow img { width: 22px; filter: brightness(0) invert(1); }
-    .services-hero h1 { max-width: 890px; margin: 0; color: #fff; font-size: 60px; font-weight: 700; line-height: 1.16; }
-    .services-hero p { max-width: 760px; margin: 24px 0 0; color: rgba(255,255,255,.84); font-size: 18px; line-height: 1.85; }
-    .services-breadcrumb { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; color: rgba(255,255,255,.75); }
+    .services-hero h1 { max-width: 760px; margin: 0 auto; color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; }
+    .services-hero p { max-width: 700px; margin: 16px 0 0; color: rgba(255,255,255,.84); font-size: 16px; line-height: 1.7; }
+    .services-breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; color: rgba(255,255,255,.75); font-size: 14px; }
     .services-breadcrumb a { color: #fff; }
     .services-section { padding: 96px 0; }
     .services-section.white { background: #fff; }
@@ -105,8 +105,9 @@ $businessTiers = [
         .journey-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
     @media (max-width: 767px) {
-        .services-hero { padding: 112px 0 72px; }
-        .services-hero h1 { font-size: 38px; line-height: 1.24; }
+        .services-hero { padding: 72px 0 48px; }
+        .services-hero h1 { font-size: 30px; line-height: 1.24; }
+        .services-hero p { font-size: 15px; }
         .services-section { padding: 68px 0; }
         .services-title h2 { font-size: 32px; }
         .journey-strip { grid-template-columns: 1fr; }
@@ -116,9 +117,7 @@ $businessTiers = [
 <main class="finwert-services-directory">
     <section class="services-hero">
         <div class="container">
-            <span class="services-eyebrow"><img src="assets/img/icon/subtitle-icon-white.svg" alt=""> Services</span>
-            <h1>Finance, compliance, fundraising, and advisory services for every business stage.</h1>
-            <p>Finwert offers one-stop consulting support across Finance, Compliance, Accounting, Secretarial, Fundraising, Due Diligence, Tax, and Corporate Services. We support companies at every stage — from incorporation to stock market listing — and scale our team at the client's evolving needs.</p>
+            <h1>Services</h1>
             <div class="services-breadcrumb"><a href="index.php">Home</a><span>/</span><span>Services</span></div>
         </div>
     </section>
