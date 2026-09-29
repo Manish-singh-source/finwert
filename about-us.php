@@ -4,6 +4,29 @@ require __DIR__ . '/includes/header.php';
 ?>
 
 <style>
+    .finwert-about-page .finwert-core-strengths {
+        background: linear-gradient(135deg, #f4f9ff 0%, #e8f4ff 100%);
+    }
+    .finwert-about-page .finwert-core-strengths .vl-section-title-2 .sub-title,
+    .finwert-about-page .finwert-core-strengths .vl-section-title-2 .title {
+        color: #213861;
+    }
+    .finwert-about-page .finwert-core-strengths .solution__wrapbox2 {
+        border-color: rgba(33, 56, 97, .14);
+        background: #fff;
+        box-shadow: 0 12px 30px rgba(33, 56, 97, .1);
+    }
+    .finwert-about-page .finwert-core-strengths .solution__wrapbox2-num {
+        background: #213861;
+        color: #fff;
+    }
+    .finwert-about-page .finwert-core-strengths .solution__wrapbox2-content .title {
+        color: #213861;
+        font-weight: 600;
+    }
+    .finwert-about-page .finwert-core-strengths .solution__wrapbox2-content .para {
+        color: #456486;
+    }
     /* Keep About Us typography consistent with the current Finwert redesign. */
     .finwert-about-page,
     .finwert-about-page *:not(i) {
@@ -34,8 +57,15 @@ require __DIR__ . '/includes/header.php';
     }
 
     .finwert-about-page {
-        overflow-x: hidden;
+        overflow-x: clip;
+        overflow-y: visible !important;
     }
+    html:has(body.finwert-about-page),
+    body.finwert-about-page {
+        overflow-y: visible !important;
+        height: auto !important;
+    }
+    html:has(body.finwert-about-page) { overflow-y: auto !important; }
 
     .finwert-about-hero {
         position: relative;
@@ -587,6 +617,8 @@ require __DIR__ . '/includes/header.php';
         border: 1px solid rgba(22, 140, 255, .14);
         box-shadow: 0 14px 34px rgba(10, 58, 120, .09);
         cursor: pointer;
+        padding: 14px 18px;
+        margin-bottom: 25px;
     }
 
     .finwert-about-page .finwert-benefits-section .service-tab-list-item .nav-link.active {
@@ -598,6 +630,10 @@ require __DIR__ . '/includes/header.php';
         border: 1px solid rgba(22, 140, 255, .18);
         border-radius: 12px;
         color: #168cff;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        margin-right: 12px;
     }
 
     .finwert-about-page .finwert-benefits-section .service-tab-list-item .nav-link.active .tab-list-flex-icon span {
@@ -608,6 +644,8 @@ require __DIR__ . '/includes/header.php';
     .finwert-about-page .finwert-benefits-section .tab-list-flex-content .title {
         color: #071f58;
         font-weight: 600;
+        font-size: 21px;
+        line-height: 1.25;
     }
 
     .finwert-about-page .finwert-benefits-section .service-tab-list-item .nav-link.active .tab-list-flex-content .title,
@@ -729,6 +767,19 @@ require __DIR__ . '/includes/header.php';
     .finwert-about-page .finwert-team-carousel-section .team-pagination7 {
         margin-top: 0;
     }
+    .finwert-about-page .finwert-team-carousel-section .team__wrap7 { cursor: pointer; }
+    .finwert-team-modal { display:none; position:fixed; inset:0; z-index:10000; align-items:center; justify-content:center; padding:20px; background:rgba(7,31,88,.78); }
+    .finwert-team-modal.is-open { display:flex; }
+    .finwert-team-modal-card { position:relative; display:grid; grid-template-columns:minmax(180px,.8fr) 1.2fr; max-width:760px; width:100%; overflow:hidden; border-radius:16px; background:#fff; box-shadow:0 24px 70px rgba(0,0,0,.3); }
+    .finwert-team-modal-card img { width:100%; height:100%; min-height:300px; object-fit:cover; }
+    .finwert-team-modal-copy { padding:38px; align-self:center; color:#29466f; }
+    .finwert-team-modal-copy h3 { margin:0 0 6px; color:#213861; font-size:30px; }
+    .finwert-team-modal-copy strong { color:#168cff; }
+    .finwert-team-modal-copy p { margin-top:18px; line-height:1.7; }
+    .finwert-team-modal-linkedin { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; margin-top:18px; border-radius:50%; color:#fff; background:#168cff; transition:.3s; }
+    .finwert-team-modal-linkedin:hover { color:#fff; background:#213861; }
+    .finwert-team-modal-close { position:absolute; top:12px; right:16px; border:0; background:none; color:#213861; font-size:28px; cursor:pointer; }
+    @media (max-width:575px) { .finwert-team-modal-card { grid-template-columns:1fr; } .finwert-team-modal-card img { min-height:220px; max-height:260px; } .finwert-team-modal-copy { padding:24px; } }
 
     .finwert-about-page .reveal {
         visibility: visible !important;
@@ -1013,7 +1064,7 @@ require __DIR__ . '/includes/header.php';
                             data-sal-easing="ease-in-out"> <span><i class="fa-solid fa-gift"></i></span> Benefits
                             We Offer </h4>
                         <!-- title -->
-                        <h2 class="title text-anime-style-2 pt-16">Experience the full range of our services</h2>
+                        <h2 class="title text-anime-style-2 pt-16">Practical Benefits For Your Business</h2>
                     </div>
                 </div>
             </div>
@@ -1033,7 +1084,7 @@ require __DIR__ . '/includes/header.php';
                                         <span><i class="fa-solid fa-route"></i></span>
                                     </div>
                                     <div class="tab-list-flex-content">
-                                        <h4 class="title">Financial Goals Roadmap</h4>
+                                        <h4 class="title">Virtual CFO Expertise</h4>
                                     </div>
                                 </div>
                             </div>
@@ -1045,7 +1096,7 @@ require __DIR__ . '/includes/header.php';
                                         <span><i class="fa-solid fa-seedling"></i></span>
                                     </div>
                                     <div class="tab-list-flex-content">
-                                        <h4 class="title">Growth & Risk Strategy</h4>
+                                        <h4 class="title">In-House Team Support</h4>
                                     </div>
                                 </div>
                             </div>
@@ -1057,7 +1108,7 @@ require __DIR__ . '/includes/header.php';
                                         <span><i class="fa-solid fa-hand-holding-heart"></i></span>
                                     </div>
                                     <div class="tab-list-flex-content">
-                                        <h4 class="title">Tailored Advice</h4>
+                                        <h4 class="title">Tax Optimization</h4>
                                     </div>
                                 </div>
                             </div>
@@ -1069,7 +1120,7 @@ require __DIR__ . '/includes/header.php';
                                         <span><i class="fa-solid fa-percent"></i></span>
                                     </div>
                                     <div class="tab-list-flex-content">
-                                        <h4 class="title">Tax Optimization</h4>
+                                        <h4 class="title">Audit &amp; Funding Readiness</h4>
                                     </div>
                                 </div>
                             </div>
@@ -1082,8 +1133,17 @@ require __DIR__ . '/includes/header.php';
                                         <span><i class="fa-solid fa-piggy-bank"></i></span>
                                     </div>
                                     <div class="tab-list-flex-content">
-                                        <h4 class="title">Budget & Wealth Planning</h4>
+                                        <h4 class="title">Investor Connect</h4>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="nav-link" id="v-pills-custom-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-custom" role="tab" aria-controls="v-pills-custom"
+                                aria-selected="false">
+                                <div class="tab-list-flex">
+                                    <div class="tab-list-flex-icon"><span><i class="fa-solid fa-puzzle-piece"></i></span></div>
+                                    <div class="tab-list-flex-content"><h4 class="title">Customized Support</h4></div>
                                 </div>
                             </div>
 
@@ -1109,15 +1169,13 @@ require __DIR__ . '/includes/header.php';
                                     </div>
                                     <!-- content -->
                                     <div class="content">
-                                        <h4 class="title">Roadmap for Achieving Your Financial Goals</h4>
-                                        <p class="para finwert-copy">We help you define a practical roadmap for financial clarity, compliance discipline and measurable business progress.</p>
+                                        <h4 class="title">Virtual CFO Expertise</h4>
+                                        <p class="para finwert-copy">Strategic financial leadership enabling founders to focus on growth.</p>
                                         <p class="para">We work year-round to help you plan ahead, identify
                                             deductions create tax-efficient strategies that align with your
                                             financial goals whether you’re individual.</p>
                                         <!-- btn -->
-                                        <a href="contact.php" class="vl-primary-btn-6"> <span class="arrow-1"><i
-                                                    class="fa-regular fa-arrow-right"></i></span>Explore Benefit <span
-                                                class="arrow-2"><i class="fa-regular fa-arrow-right"></i></span></a>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -1138,15 +1196,13 @@ require __DIR__ . '/includes/header.php';
                                     </div>
                                     <!-- content -->
                                     <div class="content">
-                                        <h4 class="title">Strategies for Growth, Risk Management and Cost Control</h4>
-                                        <p class="para finwert-copy">We create strategies that support growth, manage business risk and improve cost control across finance and operations.</p>
+                                        <h4 class="title">In-House Team Support</h4>
+                                        <p class="para finwert-copy">Seamless collaboration between our experts and your internal teams to extend capabilities.</p>
                                         <p class="para">We work year-round to help you plan ahead, identify
                                             deductions create tax-efficient strategies that align with your
                                             financial goals whether you’re individual.</p>
                                         <!-- btn -->
-                                        <a href="contact.php" class="vl-primary-btn-6"> <span class="arrow-1"><i
-                                                    class="fa-regular fa-arrow-right"></i></span>Explore Benefit <span
-                                                class="arrow-2"><i class="fa-regular fa-arrow-right"></i></span></a>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -1167,15 +1223,13 @@ require __DIR__ . '/includes/header.php';
                                     </div>
                                     <!-- content -->
                                     <div class="content">
-                                        <h4 class="title">Expert Tailored Advice and Solutions</h4>
-                                        <p class="para finwert-copy">Our advice is tailored to reduce financial stress and give business owners clearer, faster and more confident decisions.</p>
+                                        <h4 class="title">Tax Optimization</h4>
+                                        <p class="para finwert-copy">Intelligent tax strategies that support compliance and improve efficiency.</p>
                                         <p class="para">We work year-round to help you plan ahead, identify
                                             deductions create tax-efficient strategies that align with your
                                             financial goals whether you’re individual.</p>
                                         <!-- btn -->
-                                        <a href="contact.php" class="vl-primary-btn-6"> <span class="arrow-1"><i
-                                                    class="fa-regular fa-arrow-right"></i></span>Explore Benefit <span
-                                                class="arrow-2"><i class="fa-regular fa-arrow-right"></i></span></a>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -1196,15 +1250,13 @@ require __DIR__ . '/includes/header.php';
                                     </div>
                                     <!-- content -->
                                     <div class="content">
-                                        <h4 class="title">Optimize Tax Strategy More Efficiently</h4>
-                                        <p class="para finwert-copy">We help identify deductions, credits and tax-effective investment options so your tax strategy becomes more efficient.</p>
+                                        <h4 class="title">Audit &amp; Funding Readiness</h4>
+                                        <p class="para finwert-copy">Continuous documentation keeps your business prepared for audits, due diligence, and funding.</p>
                                         <p class="para">We work year-round to help you plan ahead, identify
                                             deductions create tax-efficient strategies that align with your
                                             financial goals whether you’re individual.</p>
                                         <!-- btn -->
-                                        <a href="contact.php" class="vl-primary-btn-6"> <span class="arrow-1"><i
-                                                    class="fa-regular fa-arrow-right"></i></span>Explore Benefit <span
-                                                class="arrow-2"><i class="fa-regular fa-arrow-right"></i></span></a>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1226,15 +1278,26 @@ require __DIR__ . '/includes/header.php';
                                     </div>
                                     <!-- content -->
                                     <div class="content">
-                                        <h4 class="title">Plan Budgeting, Savings, Investing and Debt Management</h4>
-                                        <p class="para finwert-copy">We support planning across budgeting, savings, investing, debt management, insurance and retirement needs.</p>
+                                        <h4 class="title">Connect With Investors</h4>
+                                        <p class="para finwert-copy">We facilitate investor relationships and funding opportunities to accelerate business scale.</p>
                                         <p class="para">We work year-round to help you plan ahead, identify
                                             deductions create tax-efficient strategies that align with your
                                             financial goals whether you’re individual.</p>
                                         <!-- btn -->
-                                        <a href="contact.php" class="vl-primary-btn-6"> <span class="arrow-1"><i
-                                                    class="fa-regular fa-arrow-right"></i></span>Explore Benefit <span
-                                                class="arrow-2"><i class="fa-regular fa-arrow-right"></i></span></a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-custom" role="tabpanel" aria-labelledby="v-pills-custom-tab" tabindex="0">
+                            <div class="service-tab-wrap">
+                                <div class="service-tab-wrap-thumb"><img class="w-100" src="assets/img/myimage/b4.png" alt="Customized financial support"></div>
+                                <div class="service-tab-wrap-content">
+                                    <div class="icon"><span><i class="fa-solid fa-puzzle-piece"></i></span></div>
+                                    <div class="content">
+                                        <h4 class="title">Customized Solutions And Support</h4>
+                                        <p class="para finwert-copy">We adjust our financial processes, scope, and team support to match the needs of your business.</p>
+                                        <a href="contact.php" class="vl-primary-btn-6"><span class="arrow-1"><i class="fa-regular fa-arrow-right"></i></span>Explore Benefit <span class="arrow-2"><i class="fa-regular fa-arrow-right"></i></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -1245,6 +1308,114 @@ require __DIR__ . '/includes/header.php';
         </div>
     </section>
     <!--================= Service section End =================-->
+
+     <!--================= solution section start =================-->
+       <!--================= solution section start =================-->
+        <section class="vkl-gray-bg-28 pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 mb-30">
+                        <div class="vl-solution-wrap2">
+                            <!-- section title -->
+                            <div class="vl-section-title vl-section-title-2 mb-48">
+                                <!-- title -->
+                                <h4 class="sub-title" data-sal="slide-up" data-sal-duration="1100" data-sal-delay="100"
+                                    data-sal-easing="ease-in-out"> <span><img
+                                            src="assets/img/businessconsulting2/icon/sub-title2.1.svg" alt=""></span>
+                                     Our Core Strengths</h4>
+                                <h2 class="title text-anime-style-3 pt-18">Why Businesses Choose
+Finwert</h2>
+                            </div>
+                            <!-- thumb -->
+                            <div class="vl-solution-thumb2 image-anime">
+                                <img src="assets/img/myimage/core.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 mb-30" data-sal="slide-left" data-sal-duration="1100"
+                        data-sal-delay="100" data-sal-easing="ease-in-out">
+                        <!-- single box -->
+                        <div class="solution__wrapbox2">
+                            <div class="solution__wrapbox2-num">
+                                <span>01</span>
+                            </div>
+                            <div class="solution__wrapbox2-content">
+                                <h4 class="title">Integrated Expertise</h4>
+                                <p class="para">Unified finance, 
+accounting, and legal 
+solutions under one 
+umbrella.</p>
+                            </div>
+                        </div>
+
+                        <!-- single box -->
+                        <div class="solution__wrapbox2">
+                            <div class="solution__wrapbox2-num">
+                                <span>02</span>
+                            </div>
+                            <div class="solution__wrapbox2-content">
+                                <h4 class="title">Proven Experience</h4>
+                                <p class="para">Over 15 years of cross-
+industry financial 
+leadership.</p>
+                            </div>
+                        </div>
+
+                        <!-- single box -->
+                        <div class="solution__wrapbox2">
+                            <div class="solution__wrapbox2-num">
+                                <span>03</span>
+                            </div>
+                            <div class="solution__wrapbox2-content">
+                                <h4 class="title">Technology-Driven 
+Approach</h4>
+                                <p class="para">Advanced automation 
+and digital finance tools 
+for precision.</p>
+                            </div>
+                        </div>
+
+                        <!-- single box -->
+                        <div class="solution__wrapbox2">
+                            <div class="solution__wrapbox2-num">
+                                <span>04</span>
+                            </div>
+                            <div class="solution__wrapbox2-content">
+                                <h4 class="title">Pan-India Presence</h4>
+                                <p class="para">Offices in Mumbai and 
+Bangalore serving clients 
+nationwide.</p>
+                            </div>
+                        </div>
+                         <div class="solution__wrapbox2">
+                            <div class="solution__wrapbox2-num">
+                                <span>05</span>
+                            </div>
+                            <div class="solution__wrapbox2-content">
+                                <h4 class="title">Dedicated Team</h4>
+                                <p class="para">100+ qualified 
+professionals including 
+CAs, CSs, and analysts.</p>
+                            </div>
+                        </div>
+                         <div class="solution__wrapbox2">
+                            <div class="solution__wrapbox2-num">
+                                <span>06</span>
+                            </div>
+                            <div class="solution__wrapbox2-content">
+                                <h4 class="title">Client-Centric Philosophy</h4>
+                                <p class="para">Solutions tailored for 
+measurable results and 
+trusted partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================= solution section End =================-->
+        <!--================= solution section End =================-->
 
     <!--================= Team section start =================-->
     <section class="vkl-gray-bg-8 finwert-team-carousel-section pt-100 pb-100">
@@ -1269,7 +1440,7 @@ require __DIR__ . '/includes/header.php';
                     <!-- single service slide -->
                     <div class="swiper-slide">
                         <!-- single service item -->
-                        <div class="team__wrap7">
+                        <div class="team__wrap7" data-team-name="Ronak N. Dharnidharka" data-team-role="Partner" data-team-bio="Mr. Ronak N. Dharnidharka is a tech-savvy Chartered Accountant with more than 15 years of experience across accounts, audit, budgeting, MIS, taxation, compliances, and payroll execution. He specializes in end-to-end virtual CFO support for startups, helping leadership teams assess financial risks and make informed business decisions." data-team-image="assets/img/myimage/ronak.png" data-team-linkedin="https://www.linkedin.com/in/ronak-dharnidharka-60839310b/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">
                             <!-- thumb -->
                             <div class="team__wrap7-thumb-bg">
                                 <div class="team__wrap7-thumb">
@@ -1277,7 +1448,7 @@ require __DIR__ . '/includes/header.php';
                                     <!-- social -->
                                     <div class="team__wrap7-thumb-social">
                                         <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="https://www.linkedin.com/in/ronak-dharnidharka-60839310b/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" rel="noopener" aria-label="Ronak N. Dharnidharka on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                     </div>
@@ -1287,7 +1458,7 @@ require __DIR__ . '/includes/header.php';
                             <!-- content -->
                             <div class="team__wrap7-content">
                                 <h4 class="title"><a href="team.php">Ronak N. Dharnidharka</a></h4>
-                                <p class="para">Partner (CA)</p>
+                                <p class="para">Partner</p>
                                 <!-- icon -->
                                 <div class="icon">
                                     <span><i class="fa-regular fa-plus"></i></span>
@@ -1298,7 +1469,7 @@ require __DIR__ . '/includes/header.php';
                     <!-- single service slide -->
                     <div class="swiper-slide">
                         <!-- single service item -->
-                        <div class="team__wrap7">
+                        <div class="team__wrap7" data-team-name="Pratik M. Choudhary" data-team-role="Partner" data-team-bio="Mr. Pratik M. Choudhary is a fellow member of The Institute of Chartered Accountants of India. He works with startups and closely held companies, with specialised experience in the Information Technology and Service industry. His expertise spans accounts, audit, budgeting, MIS, taxation, compliances, payroll execution, licensing agreements, and legal documentation." data-team-image="assets/img/myimage/pratik.png" data-team-linkedin="#">
                             <!-- thumb -->
                             <div class="team__wrap7-thumb-bg">
                                 <div class="team__wrap7-thumb">
@@ -1306,7 +1477,7 @@ require __DIR__ . '/includes/header.php';
                                     <!-- social -->
                                     <div class="team__wrap7-thumb-social">
                                         <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="#" aria-label="Pratik M. Choudhary on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                     </div>
@@ -1316,7 +1487,7 @@ require __DIR__ . '/includes/header.php';
                             <!-- content -->
                             <div class="team__wrap7-content">
                                 <h4 class="title"><a href="team.php">Pratik M. Choudhary</a></h4>
-                                <p class="para">Partner (CA)</p>
+                                <p class="para">Partner</p>
                                 <!-- icon -->
                                 <div class="icon">
                                     <span><i class="fa-regular fa-plus"></i></span>
@@ -1327,7 +1498,7 @@ require __DIR__ . '/includes/header.php';
                     <!-- single service slide -->
                     <div class="swiper-slide">
                         <!-- single service item -->
-                        <div class="team__wrap7">
+                        <div class="team__wrap7" data-team-name="Vikesh Agrawal" data-team-role="Partner" data-team-bio="Vikesh partners with founders and startups as a Virtual CFO, guiding them through financial planning, fundraising, investor relations, and compliance from incorporation through IPO readiness. With more than 10 years of experience across startups, manufacturing, retail, and infrastructure, he provides end-to-end financial oversight across listed and unlisted companies." data-team-image="https://finwert.com/my-images/team/Vikesh1.png" data-team-linkedin="https://www.linkedin.com/in/vikesh-agrawal-a5b62785?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">
                             <!-- thumb -->
                             <div class="team__wrap7-thumb-bg">
                                 <div class="team__wrap7-thumb">
@@ -1335,7 +1506,7 @@ require __DIR__ . '/includes/header.php';
                                     <!-- social -->
                                     <div class="team__wrap7-thumb-social">
                                         <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="https://www.linkedin.com/in/vikesh-agrawal-a5b62785?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener" aria-label="Vikesh Agrawal on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                     </div>
@@ -1354,60 +1525,61 @@ require __DIR__ . '/includes/header.php';
                         </div>
                     </div>
                     <!-- single service slide -->
-                    <div class="swiper-slide">
-                        <!-- single service item -->
-                        <div class="team__wrap7">
-                            <!-- thumb -->
-                            <div class="team__wrap7-thumb-bg">
-                                <div class="team__wrap7-thumb">
-                                    <img src="assets/img/myimage/main.png" alt="Finwert professional team">
-                                    <!-- social -->
-                                    <div class="team__wrap7-thumb-social">
-                                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- content -->
-                            <div class="team__wrap7-content">
-                                <h4 class="title"><a href="team.php">Finwert Team</a></h4>
-                                <p class="para">75+ Professionals</p>
-                                <!-- icon -->
-                                <div class="icon">
-                                    <span><i class="fa-regular fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <!-- dot pagination style -->
-            <div class="team-pagination7">
+            <!-- <div class="team-pagination7">
                 <div class="swiper-pagination7"></div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--================= Team section End =================-->
 
-
-
-
-
-    <section class="finwert-about-final-cta">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8">
-                    <h2>Build with financial clarity and compliance confidence.</h2>
-                    <p class="finwert-copy">Connect with Finwert for finance, compliance, accounting and advisory support tailored to your business.</p>
-                    <p>Let’s turn your financial complexity into clarity, confidence and momentum.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end"><a href="consult.php" class="vl-primary-btn">Start a Conversation <span><img src="assets/img/icon/arrow-right-5.1.svg" alt=""></span></a></div>
+    <div class="finwert-team-modal" id="finwertTeamModal" aria-hidden="true">
+        <div class="finwert-team-modal-card" role="dialog" aria-modal="true" aria-labelledby="finwertTeamModalName">
+            <button class="finwert-team-modal-close" type="button" aria-label="Close profile">&times;</button>
+            <img id="finwertTeamModalImage" src="" alt="">
+            <div class="finwert-team-modal-copy">
+                <h3 id="finwertTeamModalName"></h3>
+                <strong id="finwertTeamModalRole"></strong>
+                <p id="finwertTeamModalBio"></p>
+                <a class="finwert-team-modal-linkedin" id="finwertTeamModalLinkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
-    </section>
+    </div>
+
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('finwertTeamModal');
+    if (!modal) return;
+    const close = () => { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); };
+    document.querySelectorAll('.finwert-team-carousel-section .team__wrap7').forEach(function (card) {
+        card.addEventListener('click', function (event) {
+            if (event.target.closest('a')) event.preventDefault();
+            document.getElementById('finwertTeamModalName').textContent = card.dataset.teamName;
+            document.getElementById('finwertTeamModalRole').textContent = card.dataset.teamRole;
+            document.getElementById('finwertTeamModalBio').textContent = card.dataset.teamBio;
+            const linkedin = document.getElementById('finwertTeamModalLinkedin');
+            const linkedinUrl = card.dataset.teamLinkedin || '#';
+            linkedin.href = linkedinUrl;
+            linkedin.removeAttribute('target');
+            linkedin.removeAttribute('rel');
+            if (linkedinUrl !== '#') {
+                linkedin.target = '_blank';
+                linkedin.rel = 'noopener';
+            }
+            const image = document.getElementById('finwertTeamModalImage');
+            image.src = card.dataset.teamImage;
+            image.alt = card.dataset.teamName;
+            modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false');
+        });
+    });
+    modal.addEventListener('click', function (event) { if (event.target === modal || event.target.closest('.finwert-team-modal-close')) close(); });
+    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') close(); });
+});
+</script>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

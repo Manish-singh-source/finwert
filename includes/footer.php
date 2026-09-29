@@ -1,13 +1,31 @@
-    <footer class="vl-footer finwert-footer fix pt-100">
+    <footer class="vl-footer finwert-footer finwert-footer-compact fix">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12 mb-80"><div class="cta-area-3 vkl-black-bg-5"><div class="vl-cta-content vl-cta-content-3"><h2 class="title">Talk To Our Consultants And Take The Next Step Today.</h2></div><div class="vl-cta-form vl-cta-form-5"><form action="#"><input type="email" placeholder="Email Address"><div class="vl-cta-btn"><button class="finwert-subscribe-btn">Subscribe<span><img src="assets/img/icon/arrow-right-5.1.svg" alt=""></span></button></div></form></div></div></div>
-                <div class="col-xl-4 col-md-6 mb-30"><div class="vl-footer-widget-1"><div class="vl-footer-logo"><a href="index.html"><img src="assets/img/logo/logo.png" alt="Finwert"></a></div><div class="vl-footer-content vl-footer-content-5"><p class="para pt-16 pb-24">We provide strategic financial, compliance, and accounting solutions that help businesses grow with clarity, confidence, and long-term value.</p></div><div class="social-area social-area-footer-5"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div></div>
-                <div class="col-xl-2 col-md-6 mb-30"><div class="vl-footer-widget-2"><h3 class="vl-footer-widget-title vl-footer-widget-title-5 mb-30">Support</h3><div class="vl-footer-menu vl-footer-menu-5"><ul><li><a href="about-us.php">About Us</a></li><li><a href="services.php">Services</a></li><li><a href="#">Case Studies</a></li><li><a href="contact.php">Contact Us</a></li><li><a href="faq.html">FAQ</a></li></ul></div></div></div>
-                <div class="col-xl-2 col-md-6 mb-30"><div class="vl-footer-widget-3"><h3 class="vl-footer-widget-title vl-footer-widget-title-5 mb-30">Top Links</h3><div class="vl-footer-menu vl-footer-menu-5"><ul><li><a href="service-single.php?service=startup-solutions">Startup Solutions</a></li><li><a href="service-single.php?service=virtual-cfo">Virtual CFO Services</a></li><li><a href="service-single.php?service=debt-fundraising">Debt Fundraising</a></li><li><a href="service-single.php?service=growth-capital">Growth Capital</a></li><li><a href="service-single-accounting.php">Accounting Services</a></li></ul></div></div></div>
-                <div class="col-xl-4 col-md-6 mb-30"><div class="vl-footer-widget-4"><h3 class="vl-footer-widget-title vl-footer-widget-title-5 mb-30">Contact Us</h3><div class="vl-icon-list vl-icon-list-5"><ul><li><a href="tel:+919773149764"><span class="mr-8"><img src="assets/img/icon/footer-ph-1.1.svg" alt=""></span>+91 97731 49764</a></li><li><a href="contact.php"><span class="mr-8"><img src="assets/img/icon/vl-location-1.1.svg" alt=""></span>Mumbai &amp; Bangalore, India</a></li><li><a href="mailto:info@finwert.com"><span class="mr-8"><img src="assets/img/icon/footer-mail-1.1.svg" alt=""></span>info@finwert.com</a></li><li><a href="https://finwert.com" target="_blank" rel="noopener"><span class="mr-8"><img src="assets/img/icon/web-icon-1.1.svg" alt=""></span>www.finwert.com</a></li></ul></div></div></div>
+            <div class="finwert-footer-main">
+                <div class="finwert-footer-brand">
+                    <a href="index.php"><img src="assets/img/logo/logo.png" alt="Finwert" width="180"></a>
+                    <p>Your Finance Co-Founder.</p>
+                    <!-- Replace placeholders with the official social profile URLs. -->
+                    <div class="finwert-footer-social" aria-label="Social media">
+                        <a href="https://www.instagram.com/finwert_advisors?igsh=aWd2Y2h3MWU5cDh1" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/company/finwert-advisors-india/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <nav class="finwert-footer-links" aria-label="Footer navigation">
+                    <a href="about-us.php">About Us</a>
+                    <a href="services.php">Services</a>
+                    <a href="transactions.php">Transactions</a>
+                    <a href="contact.php">Contact Us</a>
+                </nav>
+                <div class="finwert-footer-contact">
+                    <a href="tel:+919773149764"><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 97731 49764</a>
+                    <a href="mailto:info@finwert.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@finwert.com</a>
+                    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Mumbai &amp; Bangalore, India</span>
+                </div>
             </div>
-            <div class="vl-copy-righ1t vl-copy-righ1t-5"><div class="row"><div class="col-lg-6 col-md-6 mb-30"><div class="vl-footer-copy-right-widget vl-footer-copy-right-widget-5"><p class="para">&copy; 2026 Finwert. All Rights Reserved.</p></div></div><div class="col-lg-6 col-md-6 mb-30"><div class="vl-copy-right-menu vl-copy-right-menu-5"><ul><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Privacy Policy</a></li></ul></div></div></div></div>
+            <div class="finwert-footer-bottom">
+                <p>&copy; 2026 Finwert. All Rights Reserved.</p>
+                <div><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a></div>
+            </div>
         </div>
     </footer>
     <script src="assets/js/plugins/jquery-3.7.1.min.js"></script><script src="assets/js/plugins/bootstrap.min.js"></script><script src="assets/js/plugins/gsap.min.js"></script><script src="assets/js/plugins/ScrollTrigger.min.js"></script><script src="assets/js/plugins/swiper-bundle.min.js"></script><script src="assets/js/plugins/nice-select.js"></script><script src="assets/js/plugins/fontawesome.min.js"></script><script src="assets/js/plugins/magnific-popup.js"></script><script src="assets/js/plugins/jquery.counterup.min.js"></script><script src="assets/js/plugins/waypoints.js"></script><script src="assets/js/plugins/sal.min.js"></script><script src="assets/js/plugins/SmoothScroll.js"></script><script src="assets/js/plugins/SplitText.min.js"></script><script src="assets/js/plugins/jarallax.min.js"></script><script src="assets/js/cat.js"></script><script src="assets/js/main.js"></script><script src="assets/js/local-fixes.js"></script>

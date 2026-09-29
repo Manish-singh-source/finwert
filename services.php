@@ -1,6 +1,70 @@
 <?php
 $pageTitle = 'Our Services | Finwert';
-require __DIR__ . '/includes/service-data.php';
+$finwertServices = [
+    'startup-solutions' => [
+        'title' => 'Startup Solutions',
+        'short' => 'Finance, compliance, and setup support for early-stage companies.',
+        'thumb' => 'assets/img/myimage/startup-solutions-overview.png',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.3.png',
+        'stage' => 'Incorporation and early growth',
+    ],
+    'virtual-cfo' => [
+        'title' => 'Virtual CFO Services',
+        'short' => 'CFO-level finance guidance, planning, controls, MIS, compliance, and decision support without building a full internal CFO office.',
+        'thumb' => 'assets/img/myimage/02_Virtual_CFO_Services.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.1.png',
+        'stage' => 'Growth and scaling',
+    ],
+    'debt-fundraising' => [
+        'title' => 'Debt Financing',
+        'short' => 'Structured debt support for working capital, expansion, acquisition, and project financing needs.',
+        'thumb' => 'assets/img/myimage/03_Debt_Fundraising.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.2.png',
+        'stage' => 'Working capital and expansion',
+    ],
+    'growth-capital' => [
+        'title' => 'Capital Market, Fundraising & IPO Advisory',
+        'short' => 'Strategic capital raising, equity fundraising, debt financing, IPO readiness, and capital structure advisory for scaling companies.',
+        'thumb' => 'assets/img/myimage/04_Growth_Capital_Fundraising.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.3.png',
+        'stage' => 'Scaling, pre-IPO, and listing readiness',
+    ],
+    'accounting-financial' => [
+        'title' => 'Accounting & Financial Services',
+        'short' => 'End-to-end finance and accounting solutions for cleaner books and better reporting.',
+        'thumb' => 'assets/img/myimage/05_Accounting_Financial_Services.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.4.png',
+        'stage' => 'Recurring finance operations',
+    ],
+    'due-diligence' => [
+        'title' => 'Due Diligence',
+        'short' => 'Risk review and financial analysis for transactions, investments, and business decisions.',
+        'thumb' => 'assets/img/myimage/06_Due_Diligence.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.1.png',
+        'stage' => 'Transactions and decision support',
+    ],
+    'legal-secretarial' => [
+        'title' => 'Legal & Secretarial Services',
+        'short' => 'Company incorporation, secretarial support, and governance-related coordination.',
+        'thumb' => 'assets/img/myimage/07_Legal_Secretarial_Services.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.2.png',
+        'stage' => 'Incorporation, governance, and compliance',
+    ],
+    'tax-advisory' => [
+        'title' => 'Tax Advisory Services',
+        'short' => 'Tax planning and advisory support to help businesses navigate taxation complexity.',
+        'thumb' => 'assets/img/myimage/08_Tax_Advisory_Services.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.4.png',
+        'stage' => 'Compliance and advisory',
+    ],
+    'corporate' => [
+        'title' => 'Corporate Services',
+        'short' => 'Strategic guidance and digital solutions for corporate finance and business goals.',
+        'thumb' => 'assets/img/myimage/09_Corporate_Services.jpg',
+        'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.3.png',
+        'stage' => 'Corporate finance and business support',
+    ],
+];
 require __DIR__ . '/includes/header.php';
 
 $businessTiers = [
@@ -147,7 +211,7 @@ $businessTiers = [
             <div class="row g-4">
                 <?php foreach ($finwertServices as $slug => $service) : ?>
                     <div class="col-xl-4 col-md-6">
-                        <a class="service-directory-card" href="<?php echo htmlspecialchars(finwert_service_url($slug, $service), ENT_QUOTES, 'UTF-8'); ?>">
+                        <a id="<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>" class="service-directory-card" href="<?php echo htmlspecialchars((['startup-solutions' => 'service-single-startup-solutions.php', 'accounting-financial' => 'service-single-accounting.php', 'due-diligence' => 'service-single-due-diligence.php', 'legal-secretarial' => 'service-single-legal-secretarial.php', 'tax-advisory' => 'service-single-tax-advisory.php', 'corporate' => 'service-single-corporate.php', 'debt-fundraising' => 'service-single-debt-fundraising.php', 'virtual-cfo' => 'virtual-cfo-services.php'][$slug] ?? '#' . $slug), ENT_QUOTES, 'UTF-8'); ?>">
                             <span class="thumb">
                                 <img src="<?php echo htmlspecialchars($service['thumb'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?>">
                                 <span class="icon"><img src="<?php echo htmlspecialchars($service['icon'], ENT_QUOTES, 'UTF-8'); ?>" alt=""></span>
@@ -180,7 +244,7 @@ $businessTiers = [
                             <div class="tier-links">
                                 <?php foreach ($tier['services'] as $slug) : ?>
                                     <?php if (!isset($finwertServices[$slug])) { continue; } ?>
-                                    <a href="<?php echo htmlspecialchars(finwert_service_url($slug, $finwertServices[$slug]), ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($finwertServices[$slug]['title'], ENT_QUOTES, 'UTF-8'); ?></a>
+                                    <a href="<?php echo htmlspecialchars((['startup-solutions' => 'service-single-startup-solutions.php', 'accounting-financial' => 'service-single-accounting.php', 'due-diligence' => 'service-single-due-diligence.php', 'legal-secretarial' => 'service-single-legal-secretarial.php', 'tax-advisory' => 'service-single-tax-advisory.php', 'corporate' => 'service-single-corporate.php', 'debt-fundraising' => 'service-single-debt-fundraising.php', 'virtual-cfo' => 'virtual-cfo-services.php'][$slug] ?? '#' . $slug), ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($finwertServices[$slug]['title'], ENT_QUOTES, 'UTF-8'); ?></a>
                                 <?php endforeach; ?>
                             </div>
                         </div>

@@ -3,12 +3,12 @@ $pageTitle = 'Transactions | Finwert';
 require __DIR__ . '/includes/header.php';
 
 $transactionCategories = [
-    ['title' => 'Fundraising', 'text' => 'Debt, growth capital, strategic investor, and pre-IPO fundraising readiness and execution support.', 'href' => 'service-single.php?service=growth-capital'],
-    ['title' => 'Mergers & Acquisitions', 'text' => 'Transaction preparation, financial information support, buyer / investor coordination, and execution assistance.', 'href' => 'service-single.php?service=due-diligence'],
-    ['title' => 'Due Diligence', 'text' => 'Financial review, risk identification, management information support, and diligence coordination.', 'href' => 'service-single.php?service=due-diligence'],
-    ['title' => 'Capital Structuring', 'text' => 'Debt and equity mix assessment for expansion, working capital, acquisitions, and strategic finance needs.', 'href' => 'service-single.php?service=debt-fundraising'],
-    ['title' => 'IPO / Pre-IPO Advisory', 'text' => 'Readiness support for financial reporting, investor information, governance, and capital market preparation.', 'href' => 'service-single.php?service=growth-capital'],
-    ['title' => 'Business Sale / Divestment', 'text' => 'Financial preparation, information pack support, diligence readiness, and transaction coordination.', 'href' => 'service-single.php?service=corporate'],
+    ['title' => 'Fundraising', 'text' => 'Debt, growth capital, strategic investor, and pre-IPO fundraising readiness and execution support.', 'href' => 'service-single-growth-capital.php'],
+    ['title' => 'Mergers & Acquisitions', 'text' => 'Transaction preparation, financial information support, buyer / investor coordination, and execution assistance.', 'href' => 'service-single-due-diligence.php'],
+    ['title' => 'Due Diligence', 'text' => 'Financial review, risk identification, management information support, and diligence coordination.', 'href' => 'service-single-due-diligence.php'],
+    ['title' => 'Capital Structuring', 'text' => 'Debt and equity mix assessment for expansion, working capital, acquisitions, and strategic finance needs.', 'href' => 'service-single-debt-fundraising.php'],
+    ['title' => 'IPO / Pre-IPO Advisory', 'text' => 'Readiness support for financial reporting, investor information, governance, and capital market preparation.', 'href' => 'service-single-growth-capital.php'],
+    ['title' => 'Business Sale / Divestment', 'text' => 'Financial preparation, information pack support, diligence readiness, and transaction coordination.', 'href' => 'service-single-corporate.php'],
 ];
 
 $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structuring', 'Negotiation', 'Execution', 'Post-Transaction Support'];
@@ -184,9 +184,9 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
                 <h2>Explore transaction-linked services.</h2>
             </div>
             <div class="row g-4">
-                <div class="col-md-4"><a class="transaction-card" href="service-single.php?service=debt-fundraising"><small>Debt</small><h3>Debt Fundraising</h3><p>Structured debt support for working capital, expansion, acquisitions, and project financing.</p><strong>View Details</strong></a></div>
-                <div class="col-md-4"><a class="transaction-card" href="service-single.php?service=growth-capital"><small>Equity</small><h3>Growth Capital</h3><p>Strategic investor, private equity, pre-IPO, and IPO advisory support.</p><strong>View Details</strong></a></div>
-                <div class="col-md-4"><a class="transaction-card" href="service-single.php?service=due-diligence"><small>Review</small><h3>Due Diligence</h3><p>Financial review, risk identification, and transaction information support.</p><strong>View Details</strong></a></div>
+                <div class="col-md-4"><a class="transaction-card" href="service-single-debt-fundraising.php"><small>Debt</small><h3>Debt Fundraising</h3><p>Structured debt support for working capital, expansion, acquisitions, and project financing.</p><strong>View Details</strong></a></div>
+                <div class="col-md-4"><a class="transaction-card" href="service-single-growth-capital.php"><small>Equity</small><h3>Growth Capital</h3><p>Strategic investor, private equity, pre-IPO, and IPO advisory support.</p><strong>View Details</strong></a></div>
+                <div class="col-md-4"><a class="transaction-card" href="service-single-due-diligence.php"><small>Review</small><h3>Due Diligence</h3><p>Financial review, risk identification, and transaction information support.</p><strong>View Details</strong></a></div>
             </div>
         </div>
     </section>

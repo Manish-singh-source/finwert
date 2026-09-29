@@ -1,3 +1,8 @@
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+$isFinwertServicesPage = in_array($currentPage, ['services.php', 'service-single.php', 'transactions.php', 'virtual-cfo-services.php'], true)
+    || strpos($currentPage, 'service-single-') === 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="corporate-consulting-page<?php echo basename($_SERVER['PHP_SELF']) === 'about-us.php' ? ' finwert-about-page' : (basename($_SERVER['PHP_SELF']) === 'contact.php' ? ' finwert-contact-page' : (basename($_SERVER['PHP_SELF']) === 'team.php' ? ' finwert-team-page' : (basename($_SERVER['PHP_SELF']) === 'consult.php' ? ' finwert-consult-page' : (in_array(basename($_SERVER['PHP_SELF']), ['services.php', 'service-single.php', 'service-single-accounting.php', 'transactions.php'], true) ? ' finwert-services-page' : '')))); ?>">
+<body class="corporate-consulting-page<?php echo $currentPage === 'about-us.php' ? ' finwert-about-page' : ($currentPage === 'contact.php' ? ' finwert-contact-page' : ($currentPage === 'team.php' ? ' finwert-team-page' : ($currentPage === 'consult.php' ? ' finwert-consult-page' : ($isFinwertServicesPage ? ' finwert-services-page' : '')))); ?>">
     <div class="preloader preloader-5">
         <div class="loading-container">
             <div class="loading loading-5"></div>
@@ -25,20 +30,15 @@
     </div>
 
     <header>
-        <div id="vl-header-sticky" class="vl-header-area<?php echo in_array(basename($_SERVER['PHP_SELF']), ['services.php', 'service-single.php', 'service-single-accounting.php', 'transactions.php'], true) ? '' : ' vl-transparent-header'; ?>">
+        <div id="vl-header-sticky" class="vl-header-area<?php echo ($isFinwertServicesPage || in_array($currentPage, ['team.php', 'contact.php'], true)) ? '' : ' vl-transparent-header'; ?>">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-md-6 col-6">
                         <div class="vl-logo"><a href="index.php"><img src="assets/img/logo/logo.png" alt="Finwert"></a></div>
                     </div>
-                    <div class="col-xl-8 d-none d-xl-block">
+                    <div class="col-xl-10 d-none d-xl-block">
                         <div class="vl-main-menu vl-main-menu-5 text-center">
                             <nav class="vl-mobile-menu-active"><?php include __DIR__ . '/navbar.php'; ?></nav>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 d-none d-xl-block">
-                        <div class="vl-header-right finwert-header-cta">
-                            <div class="header-btn-5"><a href="contact.php" class="vl-primary-btn vl-primary-btn-5">Talk To An Expert <span><img src="assets/img/icon/arrow-right-5.1.svg" alt=""></span></a></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-6 d-xl-none">
@@ -66,7 +66,6 @@
             <div class="vl-offcanvas-menu vl-offcanvas-menu-5 d-lg-block mb-40">
                 <nav><?php include __DIR__ . '/navbar.php'; ?></nav>
             </div>
-            <div class="vl-offcanvas-cta mb-40"><a href="contact.php" class="vl-primary-btn vl-primary-btn-5">Talk To An Expert <span><img src="assets/img/icon/arrow-right-5.1.svg" alt=""></span></a></div>
             <div class="vl-offcanvas-info vl-offcanvas-info-5 mb-40">
                 <h3 class="vl-offcanvas-sm-title mb-20">Contact Us</h3>
                 <a href="tel:+919773149764"><span><img src="assets/img/icon/vl-icon-1.1.svg" alt=""></span> +91 97731 49764</a>

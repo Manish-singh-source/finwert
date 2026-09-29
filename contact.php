@@ -1,20 +1,12 @@
 <?php require __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="breadcrumb-wrapper fix">
+    <section class="finwert-page-hero">
         <div class="container">
-            <div class="row contact-info-row">
-                <div class="col-xl-8 mx-auto text-center">
-                    <div class="breadcrumb-text">
-                        <h2 class="title">Contact Us</h2>
-                        <ul>
-                            <li><a href="index.php">Home</a></li>
-                            <li><span aria-hidden="true">&rarr;</span></li>
-                            <li><a class="active" href="contact.php">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <h1>Contact Us</h1>
+            <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.php">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact Us</span>
+            </nav>
         </div>
     </section>
 

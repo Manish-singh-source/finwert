@@ -1,0 +1,13 @@
+.accounting-page .accounting-support-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.accounting-page .startup-support-card { padding: 32px 28px; }
+.accounting-card-detail { margin: auto 0 24px; padding-top: 18px; border-top: 1px solid #e1ebf7; color: #29466f; font-size: 13px; }
+.accounting-page .startup-card-line { margin-top: 0; }
+.accounting-practices { display: grid; gap: 28px; }
+.accounting-practices article { display: flex; align-items: flex-start; gap: 18px; }
+.accounting-practice-icon { display: flex; flex: 0 0 48px; align-items: center; justify-content: center; height: 48px; border-radius: 12px; background: #eaf4ff; color: #147bea; font-size: 20px; }
+.accounting-practices h3 { color: #071f58; font-size: 21px; margin: 0 0 12px; }
+.accounting-practices p { margin: 0; }
+@media (max-width: 991px) {
+  .accounting-page .accounting-support-grid { grid-template-columns: 1fr; }
+  .accounting-page .startup-support-card { padding: 28px; }
+}

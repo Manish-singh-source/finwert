@@ -4598,7 +4598,7 @@ p {
 }
 
 .vkl-gray-bg-28 {
-  background: var(--vkl-bg-bg-28);
+  background: #edf2fb;
 }
 
 .vkl-gray-bg-31 {
@@ -12917,7 +12917,7 @@ p {
 .vl-solution-thumb2 img {
   width: 100%;
   border-radius: 8px;
-  height: 318px;
+  height: 580px;
   object-fit: cover;
   transition: 0.3s;
 }
@@ -12936,17 +12936,17 @@ p {
   }
 }
 .solution__wrapbox2-num span {
-  background: var(--vkl-bg-bg-30);
-  height: 36px;
-  width: 36px;
-  line-height: 36px;
-  border-radius: 50px;
-  text-align: center;
-  display: inline-block;
-  transition: 0.3s;
-  color: var(--vkl-text-heading-color-2);
-  font-size: var(--vkl-font-size-font-s18);
-  margin-right: 16px;
+    background: #233a65;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+    transition: 0.3s;
+    color: #ffffff;
+    font-size: var(--vkl-font-size-font-s18);
+    margin-right: 16px;
 }
 @media (max-width: 575px) {
   .solution__wrapbox2-num span {
@@ -15067,7 +15067,7 @@ p {
   position: relative;
 }
 .team__wrap7-content .title {
-  font-size: var(--vkl-font-size-font-s24);
+  font-size: 20px;
   line-height: var(--vkl-specing-height24);
   font-weight: var(--vkl-weight-regular);
   color: var(--vkl-text-heading-color-7);
@@ -22061,7 +22061,38 @@ p {
 }
 
 .finwert-work-section .workbox__process__item-bottomcontent .up-arrow span {
-  background: #147bea;
+  display: block;
+  background: transparent;
+}
+
+.finwert-work-section .workbox__process__item,
+.finwert-work-section .workbox__process__item-topcontent,
+.finwert-work-section .workbox__process__item-bottomcontent {
+  height: 420px;
+}
+
+.finwert-work-section .workbox__process__item-bottomcontent {
+  padding-top: 30px;
+}
+
+.finwert-work-section .workbox__process__item-bottomcontent .up-arrow {
+  position: absolute;
+  bottom: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+}
+
+.finwert-work-section .workbox__process__item-bottomcontent .up-arrow img {
+  display: block;
+  width: 100%;
+  height: 64px;
+  object-fit: contain;
+}
+
+.finwert-work-section .workbox__process__item:hover .workbox__process__item-topcontent,
+.finwert-work-section .workbox__process__item:hover .workbox__process__item-bottomcontent {
+  transform: translateY(-420px);
 }
 
 /* Finwert experts section colors */
@@ -22231,15 +22262,39 @@ p {
   margin: 0 auto 54px;
 }
 
-.finwert-team-page .breadcrumb-wrapper {
-  padding-top: 165px !important;
-  padding-bottom: 90px !important;
-  background: #eaf4ff;
+.finwert-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 42px;
+  background: linear-gradient(103deg, rgba(5, 28, 78, .9) 0%, rgba(8, 47, 104, .82) 46%, rgba(8, 62, 126, .62) 100%), url("../img/myimage/finance-cofounder-bg.png") center 42% / cover no-repeat;
 }
 
-.corporate-consulting-page.finwert-team-page main > .breadcrumb-wrapper {
-  padding-top: 165px !important;
-  padding-bottom: 90px !important;
+.finwert-page-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, #168cff, #7fc4ff, #fff);
+}
+
+.finwert-page-hero,
+.finwert-page-hero * {
+  font-family: "Poppins", Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.finwert-page-hero .container { position: relative; z-index: 1; text-align: center; }
+.finwert-page-hero h1 { max-width: 760px; margin: 0 auto; color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; }
+.finwert-page-breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; color: rgba(255, 255, 255, .75); font-size: 14px; }
+.finwert-page-breadcrumb a { color: #fff; }
+
+@media (max-width: 1199px) {
+  .finwert-page-hero h1 { font-size: 52px; }
+}
+
+@media (max-width: 767px) {
+  .finwert-page-hero { padding: 72px 0 48px; }
+  .finwert-page-hero h1 { font-size: 30px; line-height: 1.24; }
 }
 
 .finwert-team-page > .vkl-gray-white-bg {
@@ -22258,7 +22313,7 @@ p {
   font-weight: var(--vkl-weight-semibold);
 }
 
-.finwert-team-page .finwert-team-intro h1 {
+.finwert-team-page .finwert-team-intro h2 {
   margin-bottom: 18px;
   color: #071f58;
   font-family: var(--vkl-family-font1);
@@ -22280,16 +22335,36 @@ p {
 .finwert-team-page .finwert-team-card {
   width: 100%;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 7px;
   border: 1px solid rgba(20, 123, 234, 0.12);
   background: #e7f2ff;
-  box-shadow: 0 14px 30px rgba(16, 68, 132, 0.1);
+  box-shadow: none;
 }
 
 .finwert-team-page .finwert-team-card-image {
-  height: 330px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 415 / 430;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
   overflow: hidden;
-  background: #dcecff;
+  background: linear-gradient(120deg, #e2f1ff, #c4dffc);
+}
+
+.finwert-team-page .finwert-team-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 31, 88, .65), transparent 27%);
+  pointer-events: none;
+}
+
+.finwert-team-page .finwert-team-card-image:focus-visible {
+  outline: 3px solid #147bea;
+  outline-offset: -5px;
 }
 
 .finwert-team-page .finwert-team-card-image img {
@@ -22297,6 +22372,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .finwert-team-page .finwert-team-card-content {
@@ -22315,6 +22391,12 @@ p {
   margin: 0 0 18px;
   color: #147bea;
   font-weight: var(--vkl-weight-semibold);
+}
+.finwert-team-page .finwert-team-card-content .location {
+  margin: 0 0 8px;
+  color: #516173;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .finwert-team-page .finwert-team-card-content > p:not(.role) {
@@ -22468,12 +22550,12 @@ p {
 }
 
 @media (max-width: 575px) {
-  .finwert-team-page .finwert-team-intro h1 {
+  .finwert-team-page .finwert-team-intro h2 {
     font-size: var(--vkl-font-size-font-s30);
   }
 
   .finwert-team-page .finwert-team-card-image {
-    height: 290px;
+    height: auto;
   }
 
   .finwert-team-page .finwert-team-card-content {
@@ -22594,6 +22676,184 @@ li,
   .title {
     line-height: 1.38 !important;
   }
+}
+
+.corporate-consulting-page .finwert-footer.finwert-footer-compact {
+  padding: 32px 0 0;
+  background: linear-gradient(120deg, #152b50, #213861);
+  color: #dce9fa;
+}
+.finwert-footer-compact .finwert-footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+.finwert-footer-compact .finwert-footer-brand img {
+  width: 180px;
+  height: auto;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.finwert-footer-compact p {
+  margin: 0;
+  color: #dce9fa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.finwert-footer-compact .finwert-footer-brand p { margin-top: 10px; }
+.finwert-footer-compact .finwert-footer-social {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.finwert-footer-compact .finwert-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #dfeeff;
+  color: #213861;
+  font-size: 16px;
+}
+.finwert-footer-compact .finwert-footer-social a:hover,
+.finwert-footer-compact .finwert-footer-social a:focus-visible {
+  background: #147bea;
+  color: #fff;
+}
+.finwert-footer-compact .finwert-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+.finwert-footer-compact a {
+  color: #f0f6ff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.finwert-footer-compact a:hover { color: #7dd3fc; }
+.finwert-footer-compact .finwert-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.finwert-footer-compact .finwert-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  border-top: 1px solid rgba(220, 233, 250, .2);
+  padding: 14px 0;
+}
+.finwert-footer-compact .finwert-footer-contact > a,
+.finwert-footer-compact .finwert-footer-contact > span {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.finwert-footer-compact .finwert-footer-contact i {
+  flex: 0 0 16px;
+  width: 16px;
+  text-align: center;
+  color: #7dd3fc;
+  font-size: 14px;
+}
+.finwert-footer-compact .finwert-footer-bottom > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media (max-width: 991px) {
+  .finwert-footer-compact .finwert-footer-main { flex-wrap: wrap; }
+  .finwert-footer-compact .finwert-footer-links { flex: 1 1 260px; }
+}
+@media (max-width: 575px) {
+  .finwert-footer-compact .finwert-footer-main { gap: 18px; }
+  .finwert-footer-compact .finwert-footer-links { flex-basis: 100%; }
+}
+
+.finwert-home-about {
+  background: #fff;
+  --vkl-text-primary-color-6: #d9edff;
+  --vkl-text-heading-color-6: #213861;
+  --vkl-text-paragrapgh-color-6: #29466f;
+  --vkl-bg-bg-9: #eaf4ff;
+}
+.finwert-home-about .vl-section-title .title,
+.finwert-home-about .vl-section-title .sub-title,
+.finwert-home-about .about-icon-box-6 .content .title,
+.finwert-home-about .phone-box-flex .content .title,
+.finwert-home-about .phone-box-flex .content .number {
+  color: #213861;
+}
+.finwert-home-about .vl-section-title .para,
+.finwert-home-about .about-icon-box-6 .content .para {
+  color: #29466f;
+}
+.finwert-home-about .about-icon-box-6 .icon span {
+  background: #eaf4ff;
+  border-color: #d1e5fb;
+}
+.finwert-home-about .about-icon-box-6 .icon span,
+.finwert-home-about .phone-box-flex .icon span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #147bea;
+}
+.finwert-home-about .phone-box-flex .icon span {
+  color: #fff;
+  font-size: 21px;
+}
+.finwert-home-about .sub-title i {
+  color: #147bea;
+  font-size: 18px;
+}
+.finwert-home-about .about-icon-box-6 .content .title:hover,
+.finwert-home-about .phone-box-flex .content .number:hover {
+  color: #147bea;
+}
+
+.finwert-profile-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  color: #29466f;
+  overflow: auto;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .3);
+}
+
+.finwert-profile-dialog::backdrop { background: rgba(7, 31, 88, .78); }
+.finwert-profile-layout { display: grid; grid-template-columns: minmax(180px, .8fr) 1.2fr; }
+.finwert-profile-photo { width: 100%; height: 100%; min-height: 300px; object-fit: cover; object-position: center top; background: #dcecff; }
+.finwert-profile-copy { padding: 38px; align-self: center; }
+.finwert-profile-copy h2 { margin: 0 0 6px; color: #213861; font-size: 30px; line-height: 1.2; }
+.finwert-profile-role { color: #168cff; }
+.finwert-profile-location { margin: 4px 0 0; color: #213861; font-size: 14px; font-weight: 500; }
+.finwert-profile-linkedin { margin: 4px 0 0; font-size: 14px; }
+.finwert-profile-linkedin a { color: #168cff; display: inline-flex; }
+.finwert-profile-bio p { margin: 18px 0 0; line-height: 1.7; }
+.finwert-profile-close { position: absolute; top: 8px; right: 10px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #fff; color: #213861; font-size: 28px; line-height: 1; cursor: pointer; }
+.finwert-profile-close:focus-visible { outline: 2px solid #147bea; outline-offset: 2px; }
+
+@media (max-width: 575px) {
+  .finwert-profile-layout { grid-template-columns: 1fr; }
+  .finwert-profile-photo { height: 260px; min-height: 0; object-fit: contain; }
+  .finwert-profile-copy { padding: 24px; }
+  .finwert-profile-copy h2 { font-size: 26px; }
 }
 
 /*# sourceMappingURL=style.css.map */
