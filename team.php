@@ -71,7 +71,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Tarun Kumar Rawat's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/tarun-rawat.png" alt="Tarun Kumar Rawat">
+                            <img src="assets/img/myimage/pepole.png" alt="Tarun Kumar Rawat">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Tarun Kumar Rawat</h2>
@@ -86,7 +86,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View CA Rohit Jangid's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/rohit-jangid.png" alt="CA Rohit Jangid">
+                            <img src="assets/img/myimage/pepole.png" alt="CA Rohit Jangid">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>CA Rohit Jangid</h2>
@@ -101,7 +101,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Rohit Runthalla's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/rohit-runthalla.png" alt="Rohit Runthalla">
+                            <img src="assets/img/myimage/pepole.png" alt="Rohit Runthalla">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Rohit Runthalla</h2>
@@ -116,7 +116,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Kapil Pandey's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/kapil-pandey.png" alt="Kapil Pandey">
+                            <img src="assets/img/myimage/pepole.png" alt="Kapil Pandey">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Kapil Pandey</h2>
@@ -131,7 +131,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Shri Ram (Shriram Mundra)'s profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/shriram-mundra.png" alt="Shri Ram (Shriram Mundra)">
+                            <img src="assets/img/myimage/pepole.png" alt="Shri Ram (Shriram Mundra)">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Shri Ram (Shriram Mundra)</h2>
@@ -146,7 +146,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Yashesh H. Gosher's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/yashesh-gosher.png" alt="Yashesh H. Gosher">
+                            <img src="assets/img/myimage/pepole.png" alt="Yashesh H. Gosher">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Yashesh H. Gosher</h2>
@@ -161,7 +161,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Nitesh Karwa's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/nitesh-karwa.png" alt="Nitesh Karwa">
+                            <img src="assets/img/myimage/pepole.png" alt="Nitesh Karwa">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Nitesh Karwa</h2>
@@ -176,7 +176,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Hemant Saini's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/hemant-saini.png" alt="Hemant Saini">
+                            <img src="assets/img/myimage/pepole.png" alt="Hemant Saini">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Hemant Saini</h2>
@@ -191,7 +191,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Ripen Gala's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/ripen-gala.png" alt="Ripen Gala">
+                            <img src="assets/img/myimage/pepole.png" alt="Ripen Gala">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Ripen Gala</h2>
@@ -206,7 +206,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="col-xl-4 col-md-6 mb-30">
                     <article class="finwert-team-card">
                         <button type="button" class="finwert-team-card-image" aria-label="View Megha Agrawal's profile" aria-haspopup="dialog" aria-controls="teamProfileDialog">
-                            <img src="assets/img/myimage/megha-agrawal.png" alt="Megha Agrawal">
+                            <img src="assets/img/myimage/pepole.png" alt="Megha Agrawal">
                         </button>
                         <div class="finwert-team-card-content" hidden>
                             <h2>Megha Agrawal</h2>

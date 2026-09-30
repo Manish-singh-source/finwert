@@ -1306,6 +1306,45 @@ sal();
     },
   });
 
+  // client logo slider
+  var swiper = new Swiper(".clientLogoSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 26,
+    grid: {
+      rows: 2,
+      fill: "row",
+    },
+    loop: true,
+    speed: 700,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".finwert-clients-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 22,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 26,
+      },
+    },
+  });
+
   const panels = document.querySelectorAll(".panel");
 
   panels.forEach((panel) => {

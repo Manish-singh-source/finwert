@@ -1,6 +1,6 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
-$isFinwertServicesPage = in_array($currentPage, ['services.php', 'service-single.php', 'transactions.php', 'virtual-cfo-services.php'], true)
+$isFinwertServicesPage = in_array($currentPage, ['services.php', 'service-single.php', 'transactions.php', 'virtual-cfo-services.php', 'capital-market-fundraising-services.php'], true)
     || strpos($currentPage, 'service-single-') === 0;
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $isFinwertServicesPage = in_array($currentPage, ['services.php', 'service-single
     </div>
 
     <header>
-        <div id="vl-header-sticky" class="vl-header-area<?php echo ($isFinwertServicesPage || in_array($currentPage, ['team.php', 'contact.php'], true)) ? '' : ' vl-transparent-header'; ?>">
+        <div id="vl-header-sticky" class="vl-header-area<?php echo ($isFinwertServicesPage || in_array($currentPage, ['team.php', 'contact.php', 'clients.php'], true)) ? '' : ' vl-transparent-header'; ?>">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-md-6 col-6">
@@ -64,7 +64,7 @@ $isFinwertServicesPage = in_array($currentPage, ['services.php', 'service-single
                 <div class="vl-offcanvas-close"><button class="vl-offcanvas-close-toggle" aria-label="Close menu"><i class="fal fa-times"></i></button></div>
             </div>
             <div class="vl-offcanvas-menu vl-offcanvas-menu-5 d-lg-block mb-40">
-                <nav><?php include __DIR__ . '/navbar.php'; ?></nav>
+                <nav></nav>
             </div>
             <div class="vl-offcanvas-info vl-offcanvas-info-5 mb-40">
                 <h3 class="vl-offcanvas-sm-title mb-20">Contact Us</h3>

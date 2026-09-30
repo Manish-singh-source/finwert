@@ -13,6 +13,7 @@
                 <nav class="finwert-footer-links" aria-label="Footer navigation">
                     <a href="about-us.php">About Us</a>
                     <a href="services.php">Services</a>
+                    <a href="clients.php">Clients</a>
                     <a href="transactions.php">Transactions</a>
                     <a href="contact.php">Contact Us</a>
                 </nav>
