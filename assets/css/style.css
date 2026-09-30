@@ -22284,9 +22284,32 @@ p {
 }
 
 .finwert-page-hero .container { position: relative; z-index: 1; text-align: center; }
+.finwert-page-hero .container.finwert-page-hero-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); align-items: center; column-gap: 56px; row-gap: 0; text-align: left; }
 .finwert-page-hero h1 { max-width: 760px; margin: 0 auto; color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; }
 .finwert-page-breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; color: rgba(255, 255, 255, .75); font-size: 14px; }
 .finwert-page-breadcrumb a { color: #fff; }
+
+.finwert-page-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr);
+  align-items: center;
+  column-gap: 56px;
+  row-gap: 0;
+  text-align: left;
+}
+.finwert-page-hero-layout > h1 { grid-column: 1; grid-row: 1; max-width: none; margin: 0; }
+.finwert-page-hero-layout > .finwert-page-breadcrumb,
+.finwert-page-hero-layout > .about-breadcrumb-trail,
+.finwert-page-hero-layout > .services-breadcrumb,
+.finwert-page-hero-layout > .transactions-breadcrumb { grid-column: 1; grid-row: 2; justify-content: flex-start; }
+.finwert-page-hero-layout > .finwert-page-slogan { grid-column: 2; grid-row: 1 / span 2; }
+.finwert-page-hero-copy { grid-column: 1; grid-row: 1 / span 2; }
+.finwert-page-hero-copy h1 { max-width: none; margin: 0; }
+.finwert-page-hero-copy .finwert-page-breadcrumb { justify-content: flex-start; }
+.finwert-page-slogan { padding: 10px 0 10px 34px; border-left: 2px solid #45b4ff; }
+.finwert-page-slogan > span { display: block; margin-bottom: 8px; color: #a8d8ff; font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+.finwert-page-hero-layout .finwert-page-slogan p { max-width: none; margin: 0; color: #fff; font-size: 34px; font-weight: 600; line-height: 1.2; }
+.finwert-page-slogan em { color: #8bd0ff; font-style: normal; }
 
 @media (max-width: 1199px) {
   .finwert-page-hero h1 { font-size: 52px; }
@@ -22295,6 +22318,21 @@ p {
 @media (max-width: 767px) {
   .finwert-page-hero { padding: 72px 0 48px; }
   .finwert-page-hero h1 { font-size: 30px; line-height: 1.24; }
+  .finwert-page-hero .container.finwert-page-hero-layout { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; }
+  .finwert-page-hero-layout { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; }
+  .finwert-page-hero-layout > h1,
+  .finwert-page-hero-layout > .finwert-page-breadcrumb,
+  .finwert-page-hero-layout > .about-breadcrumb-trail,
+  .finwert-page-hero-layout > .services-breadcrumb,
+  .finwert-page-hero-layout > .transactions-breadcrumb,
+  .finwert-page-hero-layout > .finwert-page-slogan,
+  .finwert-page-hero-copy { grid-column: 1; grid-row: auto; }
+  .finwert-page-hero-layout > .finwert-page-breadcrumb,
+  .finwert-page-hero-layout > .about-breadcrumb-trail,
+  .finwert-page-hero-layout > .services-breadcrumb,
+  .finwert-page-hero-layout > .transactions-breadcrumb { margin-top: -14px; justify-content: flex-start; }
+  .finwert-page-slogan { padding: 17px 0 0; border-top: 1px solid rgba(255, 255, 255, .3); border-left: 0; }
+  .finwert-page-hero-layout .finwert-page-slogan p { font-size: 27px; }
 }
 
 .finwert-team-page > .vkl-gray-white-bg {
@@ -22578,6 +22616,37 @@ p {
 
 @media (max-width: 767px) {
   .finwert-contact-page .contact-cards-row .contact__iconbox-inner {
+    min-height: 0;
+  }
+}
+
+.contact-details-section .contact-cards-row {
+  align-items: stretch;
+}
+
+.contact-details-section .contact-cards-row > [class*="col-"] {
+  display: flex;
+}
+
+.contact-details-section .contact__iconbox-inner {
+  width: 100%;
+  min-height: 190px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.contact-details-section .contact__iconbox-inner-content {
+  min-width: 0;
+}
+
+.contact-details-section .contact__iconbox-inner-content .info-desc {
+  display: block;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .contact-details-section .contact__iconbox-inner {
     min-height: 0;
   }
 }

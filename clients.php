@@ -122,11 +122,12 @@ require __DIR__ . '/includes/header.php';
 
 <main class="finwert-clients-page">
     <section class="finwert-page-hero">
-        <div class="container">
+        <div class="container finwert-page-hero-layout">
             <h1>Our Clients</h1>
             <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
                 <a href="index.php">Home</a><span aria-hidden="true">/</span><span aria-current="page">Our Clients</span>
             </nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 
@@ -151,7 +152,7 @@ require __DIR__ . '/includes/header.php';
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="finwert-clients-pagination swiper-pagination"></div>
+                <div class="finwert-clients-pagination swiper-pagination"></div>    
             </div>
         </div>
     </section>

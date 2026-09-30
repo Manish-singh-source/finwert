@@ -5,11 +5,12 @@ require __DIR__ . '/includes/header.php';
 <link rel="stylesheet" href="assets/css/startup-solutions.css">
 <main class="startup-page">
     <section class="finwert-page-hero">
-        <div class="container">
+        <div class="container finwert-page-hero-layout">
             <h1>Startup Solutions</h1>
             <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
                 <a href="index.php">Home</a><span aria-hidden="true">/</span><a href="services.php">Services</a><span aria-hidden="true">/</span><span aria-current="page">Startup Solutions</span>
             </nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 
@@ -47,20 +48,20 @@ require __DIR__ . '/includes/header.php';
         </div>
     </section>
 
-    <section class="startup-working">
-        <div class="container startup-working-grid">
-            <div><span class="startup-eyebrow">Expertise that fits your business</span><h2>Your tools.<br>Our experienced team.</h2></div>
-            <div><p>Our well-equipped team has experience working with both cloud-based and desktop-based software applications and provides various expert services to navigate you through every step in the entrepreneurial arena.</p><div class="startup-tool-tags"><span><i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloud-based applications</span><span><i class="fa-solid fa-desktop" aria-hidden="true"></i> Desktop-based applications</span></div></div>
-        </div>
-    </section>
-
-    <section class="startup-cfo-section">
-        <div class="container">
-            <div class="startup-cfo">
-                <div class="startup-cfo-copy"><span class="startup-eyebrow">Your Virtual CFO</span><h2>You focus on growth.<br>We handle the numbers.</h2><p>Moreover, we offer customized Virtual CFO services based on your startup businesses. You focus on the growth of your startup while Finance, funding, and accounting will be handled by us as a Virtual CFO.</p><a class="startup-button startup-button-light" href="contact.php">Talk to our team <span aria-hidden="true">&rarr;</span></a></div>
-                <div class="startup-cfo-panel"><span>FOCUS ON WHAT'S NEXT</span><h3>A finance partner<br>for your journey.</h3><ul><li><span>01</span> Finance</li><li><span>02</span> Funding</li><li><span>03</span> Accounting</li></ul></div>
+        <section class="startup-working">
+            <div class="container startup-working-grid">
+                <div><span class="startup-eyebrow">Expertise that fits your business</span><h2>Your tools.<br>Our experienced team.</h2></div>
+                <div><p>Our well-equipped team has experience working with both cloud-based and desktop-based software applications and provides various expert services to navigate you through every step in the entrepreneurial arena.</p><div class="startup-tool-tags"><span><i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloud-based applications</span><span><i class="fa-solid fa-desktop" aria-hidden="true"></i> Desktop-based applications</span></div></div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="startup-cfo-section">
+            <div class="container">
+                <div class="startup-cfo">
+                    <div class="startup-cfo-copy"><span class="startup-eyebrow">Your Virtual CFO</span><h2>You focus on growth.<br>We handle the numbers.</h2><p>Moreover, we offer customized Virtual CFO services based on your startup businesses. You focus on the growth of your startup while Finance, funding, and accounting will be handled by us as a Virtual CFO.</p><a class="startup-button startup-button-light" href="contact.php">Talk to our team <span aria-hidden="true">&rarr;</span></a></div>
+                    <div class="startup-cfo-panel"><span>FOCUS ON WHAT'S NEXT</span><h3>A finance partner<br>for your journey.</h3><ul><li><span>01</span> Finance</li><li><span>02</span> Funding</li><li><span>03</span> Accounting</li></ul></div>
+                </div>
+            </div>
+        </section>
 </main>
 <?php require __DIR__ . '/includes/footer.php'; ?>

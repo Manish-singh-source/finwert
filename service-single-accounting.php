@@ -6,11 +6,12 @@ require __DIR__ . '/includes/header.php';
 <link rel="stylesheet" href="assets/css/accounting-services.css">
 <main class="startup-page accounting-page">
     <section class="finwert-page-hero">
-        <div class="container">
+        <div class="container finwert-page-hero-layout">
             <h1>Accounting &amp; Financial Services</h1>
             <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
                 <a href="index.php">Home</a><span aria-hidden="true">/</span><a href="services.php">Services</a><span aria-hidden="true">/</span><span aria-current="page">Accounting &amp; Financial Services</span>
             </nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 

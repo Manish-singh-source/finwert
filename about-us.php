@@ -47,13 +47,54 @@ require __DIR__ . '/includes/header.php';
         font-weight: 500;
     }
 
-    .finwert-about-page .breadcrumb-wrapper {
-        padding-top: 165px;
-        padding-bottom: 90px;
+    .finwert-about-page .about-breadcrumb-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 72px 0 42px;
+        background: linear-gradient(103deg, rgba(5, 28, 78, .9), rgba(8, 47, 104, .82) 46%, rgba(8, 62, 126, .62)), url("assets/img/myimage/finance-cofounder-bg.png") center 42% / cover no-repeat;
     }
-
-    .finwert-about-page .breadcrumb-text .title {
-        font-weight: 400;
+    .finwert-about-page .about-breadcrumb-hero::after {
+        position: absolute;
+        inset: auto 0 0;
+        height: 3px;
+        background: linear-gradient(90deg, #168cff, #7fc4ff, #fff);
+        content: "";
+    }
+    .finwert-about-page .about-breadcrumb-hero .container.finwert-page-hero-layout {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr);
+        align-items: center;
+        column-gap: 56px;
+        row-gap: 0;
+        text-align: left;
+    }
+    .finwert-about-page .about-breadcrumb-hero h1 {
+        max-width: 760px;
+        margin: 0;
+        color: #fff;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
+    .finwert-about-page .about-breadcrumb-trail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 14px;
+        color: rgba(255, 255, 255, .75);
+        font-size: 14px;
+    }
+    .finwert-about-page .about-breadcrumb-trail a {
+        color: #fff;
+    }
+    @media (max-width: 767px) {
+        .finwert-about-page .about-breadcrumb-hero { padding: 72px 0 48px; }
+        .finwert-about-page .about-breadcrumb-hero .container.finwert-page-hero-layout { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; }
+        .finwert-about-page .about-breadcrumb-hero h1 { font-size: 30px; line-height: 1.24; }
     }
 
     .finwert-about-page {
@@ -844,20 +885,11 @@ require __DIR__ . '/includes/header.php';
 </style>
 
 <main class="finwert-about-page">
-    <section class="breadcrumb-wrapper fix">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 mx-auto text-center">
-                    <div class="breadcrumb-text">
-                        <h2 class="title">About Us</h2>
-                        <ul>
-                            <li><a href="index.php">Home</a></li>
-                            <li><span aria-hidden="true">&rarr;</span></li>
-                            <li><a class="active" href="about-us.php">About Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <section class="about-breadcrumb-hero">
+        <div class="container finwert-page-hero-layout">
+            <h1>About Us</h1>
+            <nav class="about-breadcrumb-trail" aria-label="Breadcrumb"><a href="index.php">Home</a><span aria-hidden="true">/</span><span aria-current="page">About Us</span></nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 

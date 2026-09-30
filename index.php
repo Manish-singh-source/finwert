@@ -46,6 +46,17 @@ $finwertServices = [
         'image' => 'assets/img/myimage/09_Corporate_Services.jpg',
     ],
 ];
+$finwertServiceLinks = [
+    'startup-solutions' => 'service-single-startup-solutions.php',
+    'virtual-cfo' => 'virtual-cfo-services.php',
+    'debt-fundraising' => 'service-single-debt-fundraising.php',
+    'growth-capital' => 'capital-market-fundraising-services.php',
+    'accounting-financial' => 'service-single-accounting.php',
+    'due-diligence' => 'service-single-due-diligence.php',
+    'legal-secretarial' => 'service-single-legal-secretarial.php',
+    'tax-advisory' => 'service-single-tax-advisory.php',
+    'corporate' => 'service-single-corporate.php',
+];
 require __DIR__ . '/includes/header.php';
 
 ?>
@@ -433,6 +444,67 @@ require __DIR__ . '/includes/header.php';
                 </div>
             </div>
 </section>
+
+  <!--================= Service section start =================-->
+        <section class="vkl-gray-bg-16 comn-relative fix pt-100 pb-100 finwert-services-showcase">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <!-- sec title -->
+                        <div class="vl-section-title vl-section-title-white mb-60">
+                            <!-- subtitle -->
+                            <h4 class="sub-title" data-sal="slide-up" data-sal-duration="1100" data-sal-delay="100"
+                                data-sal-easing="ease-in-out"> <span><img
+                                        src="assets/img/insurance/icon/sub-title-icon-9.1.svg" alt=""></span> Our
+                                Services </h4>
+                            <!-- title -->
+                            <h2 class="title text-anime-style-2 pt-16">Financial Services for Every Stage of Growth</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vl-portfolio-area-three p-relative" data-sal="slide-up" data-sal-duration="1100"
+                    data-sal-delay="100" data-sal-easing="ease-in-out">
+                    <div class="swiper serviceSwiperActive7 vl-test-slider-space">
+                        <div class="swiper-wrapper">
+                            <?php foreach ($finwertServices as $serviceKey => $service): ?>
+                                <?php
+                                $serviceTitle = htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8');
+                                $serviceImage = htmlspecialchars($service['image'], ENT_QUOTES, 'UTF-8');
+                                $serviceDescription = htmlspecialchars($service['short'], ENT_QUOTES, 'UTF-8');
+                                $serviceUrl = htmlspecialchars($finwertServiceLinks[$serviceKey], ENT_QUOTES, 'UTF-8');
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="servicebox__wrap9">
+                                        <div class="servicebox__wrap9-thumb">
+                                            <img src="<?= $serviceImage ?>" alt="<?= $serviceTitle ?>">
+                                            <div class="servicebox__wrap9-thumb-content">
+                                                <h4 class="title"><?= $serviceTitle ?></h4>
+                                            </div>
+                                            <div class="servicebox__wrap9-hover-content">
+                                                <h4 class="title"><a href="<?= $serviceUrl ?>"><?= $serviceTitle ?></a></h4>
+                                                <p class="para"><?= $serviceDescription ?></p>
+                                                <a href="<?= $serviceUrl ?>" class="readmore">Explore Service <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <!-- navigation -->
+                    <div class="vl-swiper-servicenavigation9">
+                        <div class="service-button-next-9 service-button-9"><i class="fa-regular fa-angle-left"></i>
+                        </div>
+                        <div class="service-button-prev-9 service-button-9"><i class="fa-regular fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--================= Service section End =================-->
+
     <!--================= Why choose us section start =================-->
     <section class="vl-choose-area vkl-gray-white-bg finwert-why-section fix pt-100 pb-70">
             <div class="container">

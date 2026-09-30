@@ -1,16 +1,19 @@
 <?php require __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="finwert-page-hero">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
-                <a href="index.php">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact Us</span>
-            </nav>
+    <section class="finwert-page-hero contact-page-hero">
+        <div class="container finwert-page-hero-layout">
+            <div class="finwert-page-hero-copy">
+                <h1>Contact Us</h1>
+                <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.php">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact Us</span>
+                </nav>
+            </div>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 
-    <section class="vkl-gray-white-bg fix pt-100 pb-70">
+    <section class="vkl-gray-white-bg fix pt-100 pb-70 contact-details-section">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 mb-30">
@@ -64,7 +67,7 @@
                         <div class="contact__iconbox-inner-icon"><span><i class="fa-solid fa-location-dot"></i></span></div>
                         <div class="contact__iconbox-inner-content">
                             <h3 class="title">Our Office</h3>
-                            <a href="https://www.google.com/maps/embed/v1/place?q=Antariksh+Thakur+House+104,+Antariksh,+Marol+Naka,+Taluka,+Makwana+Road,+Sir+Mathuradas+Vasanji+Rd,+Marol,+Andheri+East,+Mumbai,+Maharashtra+400059&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" target="_blank" rel="noopener" class="info-desc">501, Antariksh Thakur House, Makwana Lane, Off Andheri Kurla Road, Marol, Andheri East, Mumbai - 400059</a>
+                            <a class="info-desc">501, Antariksh Thakur House, Makwana Lane, Off Andheri Kurla Road, Marol, Andheri East, Mumbai - 400059</a>
                         </div>
                     </div>
                 </div>

@@ -31,10 +31,12 @@
 .cfo-reason-grid h3{font-size:22px;color:#071f58;margin:0 0 16px}
 .cfo-reason-grid p{font-size:14px;margin:0}
 .cfo-all-benefits{background:#f0f6fc; padding:80px 0}
-.cfo-all-benefits h2{color:#fff}
-.cfo-all-benefits .cfo-kicker{color:#9acfff}
+.cfo-all-benefits h2{color:#071f58}
+.cfo-all-benefits .cfo-kicker{color:#147bea}
 .cfo-benefits-top{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:30px}
 .cfo-expand{border:1px solid #8cc8ff;background:transparent;color:#fff;padding:13px 20px;font-size:13px;cursor:pointer}
+.cfo-all-benefits .cfo-expand{border-color:#147bea;color:#071f58}
+.cfo-all-benefits .cfo-expand:hover{background:#147bea;color:#fff}
 .cfo-expand:hover{background:#ffffff15}
 .cfo-expand:focus-visible{outline:3px solid #8cc8ff;outline-offset:4px}
 .cfo-benefit-columns{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -45,3 +47,32 @@
 @media(max-width:1199px){.cfo-duty-layout{gap:32px}.cfo-reason-grid li{padding:24px}.cfo-all-benefits summary{font-size:14px}}
 @media(max-width:991px){.cfo-duty-layout{grid-template-columns:1fr}.cfo-diagram-sticky{position:static}.cfo-wheel{max-width:540px}.cfo-intro .cfo-photo img{height:380px}.cfo-reason-grid{grid-template-columns:1fr 1fr}.cfo-reason-grid li,.cfo-reason-grid li:nth-child(n+4){grid-column:auto;flex-direction:column}.cfo-reason-grid li:last-child{grid-column:1/-1}.cfo-benefit-columns{grid-template-columns:1fr;gap:0}}
 @media(max-width:575px){.cfo-section-nav .container{gap:8px 22px}.cfo-section-nav a{font-size:12px}.cfo-full-heading{margin-bottom:28px}.cfo-reason-grid{grid-template-columns:1fr}.cfo-reasons,.cfo-all-benefits{padding:50px 0}.cfo-benefits-top{align-items:flex-start;flex-direction:column}.cfo-intro .cfo-photo img{height:300px}.cfo-all-benefits summary{padding:18px 14px}.cfo-all-benefits details p{padding-left:20px}.cfo-duty-accordion summary{font-size:15px}.cfo-diagram-note{margin-top:18px}}
+
+.cfo-process-section{position:relative;overflow:hidden;padding:84px 0 90px;color:#fff;background-color:#061f5f;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 2px,transparent 2px,transparent 28px),linear-gradient(115deg,#061f5f 0%,#0b3476 58%,#08285e 100%)}
+.cfo-process-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:66px;align-items:center}
+.cfo-process-copy{min-width:0}
+.cfo-process-section .cfo-kicker{color:#9bd6ff;margin-bottom:18px}
+.cfo-process-section h2{color:#fff;font-size:42px;line-height:1.16;margin:0 0 16px}
+.cfo-process-section h2 em{color:#72c3ff;font-style:normal}
+.cfo-process-intro{max-width:520px;color:rgba(255,255,255,.78);font-size:15px!important;line-height:1.7!important;margin:0 0 25px}
+.cfo-process-list{list-style:none;margin:0;padding:0}
+.cfo-process-list>li{border-bottom:1px solid rgba(255,255,255,.17)}
+.cfo-process-list details summary{display:grid;grid-template-columns:60px minmax(0,1fr) 30px;align-items:center;gap:18px;min-height:92px;padding:15px 0;color:#fff;cursor:pointer;list-style:none}
+.cfo-process-list details summary::-webkit-details-marker{display:none}
+.cfo-process-icon{position:relative;display:grid;place-items:center;width:50px;height:50px;border-radius:8px;background:rgba(255,255,255,.12);color:#b8e5ff;font-size:20px}
+.cfo-process-icon>span{position:absolute;top:-8px;right:-10px;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#168cff;color:#fff;font-size:11px;font-weight:700}
+.cfo-process-title{font-size:18px;font-weight:700;line-height:1.4}
+.cfo-process-toggle{display:grid;place-items:center;width:28px;height:28px;border:1px solid rgba(255,255,255,.45);border-radius:50%;color:#fff;font-size:19px;line-height:1}
+.cfo-process-toggle::before{content:'+'}
+.cfo-process-list details[open] .cfo-process-toggle{border-color:#72c3ff;background:#168cff;transform:rotate(45deg)}
+.cfo-process-list details p{max-width:540px;margin:0 36px 22px 78px;color:rgba(255,255,255,.8);font-size:14px;line-height:1.7}
+.cfo-process-list summary:focus-visible{outline:2px solid #9bd6ff;outline-offset:4px}
+.cfo-process-visual{position:relative;min-width:0;min-height:570px}
+.cfo-process-image{position:absolute;display:block;object-fit:cover;box-shadow:0 22px 55px rgba(0,0,0,.24)}
+.cfo-process-image-back{top:0;right:0;width:76%;height:470px;border-radius:2px}
+.cfo-process-image-front{top:39%;left:0;width:64%;height:330px;border:7px solid #0a3472;border-radius:12px}
+.cfo-process-badges{position:absolute;right:0;bottom:6%;display:grid;gap:10px}
+.cfo-process-badges span{display:flex;align-items:center;gap:9px;width:max-content;max-width:100%;padding:10px 13px;border-radius:6px;background:#0877c9;color:#fff;font-size:13px;font-weight:600;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.cfo-process-badges i{color:#b8edff}
+@media(max-width:991px){.cfo-process-layout{grid-template-columns:1fr;gap:28px}.cfo-process-copy{max-width:720px}.cfo-process-visual{width:min(100%,680px);min-height:550px;margin:0 auto}}
+@media(max-width:575px){.cfo-process-section{padding:54px 0 58px}.cfo-process-section h2{font-size:33px}.cfo-process-list details summary{grid-template-columns:48px minmax(0,1fr) 26px;gap:12px;min-height:82px}.cfo-process-icon{width:42px;height:42px;font-size:17px}.cfo-process-icon>span{width:23px;height:23px;font-size:10px}.cfo-process-title{font-size:15px}.cfo-process-list details p{margin:0 8px 19px 60px;font-size:13px}.cfo-process-visual{min-height:425px}.cfo-process-image-back{width:78%;height:330px}.cfo-process-image-front{top:40%;width:65%;height:225px;border-width:5px}.cfo-process-badges{right:0;bottom:0;gap:7px}.cfo-process-badges span{padding:8px 10px;font-size:11px}}

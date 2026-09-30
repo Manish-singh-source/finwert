@@ -108,13 +108,17 @@ $serviceLinks = [
         background: linear-gradient(103deg, rgba(5, 28, 78, 0.9) 0%, rgba(8, 47, 104, 0.82) 46%, rgba(8, 62, 126, 0.62) 100%), url("assets/img/myimage/finance-cofounder-bg.png") center 42% / cover no-repeat;
     }
     .services-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: linear-gradient(90deg, #168cff, #7fc4ff, #fff); }
-    .services-hero .container { position: relative; z-index: 1; text-align: center; }
+    .services-hero .container { position: relative; z-index: 1; }
+    .services-hero .container.finwert-page-hero-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); align-items: center; column-gap: 56px; row-gap: 0; text-align: left; }
     .services-eyebrow { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; color: #a8d3ff; font-size: 13px; font-weight: 600; text-transform: uppercase; }
     .services-eyebrow img { width: 22px; filter: brightness(0) invert(1); }
     .services-hero h1 { max-width: 760px; margin: 0 auto; color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; }
+    .services-hero .container.finwert-page-hero-layout > h1 { grid-column: 1; grid-row: 1; margin: 0; }
     .services-hero p { max-width: 700px; margin: 16px 0 0; color: rgba(255,255,255,.84); font-size: 16px; line-height: 1.7; }
     .services-breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; color: rgba(255,255,255,.75); font-size: 14px; }
     .services-breadcrumb a { color: #fff; }
+    .services-hero .container.finwert-page-hero-layout > .services-breadcrumb { grid-column: 1; grid-row: 2; justify-content: flex-start; }
+    .services-hero .container.finwert-page-hero-layout > .finwert-page-slogan { grid-column: 2; grid-row: 1 / span 2; }
     .services-section { padding: 96px 0; }
     .services-section.white { background: #fff; }
     .finwert-business-size-section { background: #f1f7fd; }
@@ -310,6 +314,11 @@ $serviceLinks = [
     }
     @media (max-width: 767px) {
         .services-hero { padding: 72px 0 48px; }
+        .services-hero .container.finwert-page-hero-layout { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; }
+        .services-hero .container.finwert-page-hero-layout > h1,
+        .services-hero .container.finwert-page-hero-layout > .services-breadcrumb,
+        .services-hero .container.finwert-page-hero-layout > .finwert-page-slogan { grid-column: 1; grid-row: auto; }
+        .services-hero .container.finwert-page-hero-layout > .services-breadcrumb { margin-top: -14px; }
         .services-hero h1 { font-size: 30px; line-height: 1.24; }
         .services-hero p { font-size: 15px; }
         .services-section { padding: 68px 0; }
@@ -322,9 +331,10 @@ $serviceLinks = [
 
 <main class="finwert-services-directory">
     <section class="services-hero">
-        <div class="container">
+        <div class="container finwert-page-hero-layout">
             <h1>Services</h1>
-            <div class="services-breadcrumb"><a href="index.php">Home</a><span>/</span><span>Services</span></div>
+            <nav class="services-breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a><span>/</span><span aria-current="page">Services</span></nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 

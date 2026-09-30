@@ -5,11 +5,12 @@ require __DIR__ . '/includes/header.php';
 
 <main class="finwert-team-page">
     <section class="finwert-page-hero">
-        <div class="container">
+        <div class="container finwert-page-hero-layout">
             <h1>Our Team</h1>
             <nav class="finwert-page-breadcrumb" aria-label="Breadcrumb">
                 <a href="index.php">Home</a><span aria-hidden="true">/</span><span aria-current="page">Our Team</span>
             </nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 

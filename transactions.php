@@ -25,10 +25,14 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
         background: linear-gradient(103deg, rgba(5, 28, 78, .9) 0%, rgba(8, 47, 104, .82) 46%, rgba(8, 62, 126, .62) 100%), url("assets/img/finwert/about/about-main.png") center 42% / cover no-repeat;
     }
     .transactions-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: linear-gradient(90deg, #168cff, #7fc4ff, #fff); }
-    .transactions-hero .container { position: relative; z-index: 1; text-align: center; }
+    .transactions-hero .container { position: relative; z-index: 1; }
+    .transactions-hero .container.finwert-page-hero-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); align-items: center; column-gap: 56px; row-gap: 0; text-align: left; }
     .transactions-hero h1 { max-width: 760px; margin: 0 auto; color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; }
+    .transactions-hero .container.finwert-page-hero-layout > h1 { grid-column: 1; grid-row: 1; margin: 0; }
     .transactions-breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; color: rgba(255,255,255,.75); font-size: 14px; }
     .transactions-breadcrumb a { color: #fff; }
+    .transactions-hero .container.finwert-page-hero-layout > .transactions-breadcrumb { grid-column: 1; grid-row: 2; justify-content: flex-start; }
+    .transactions-hero .container.finwert-page-hero-layout > .finwert-page-slogan { grid-column: 2; grid-row: 1 / span 2; }
     .transactions-intro { padding: 82px 0; background: #fff; }
     .transactions-intro .container { max-width: 900px; text-align: center; }
     .transactions-intro h2 { margin: 0; color: #061f58; font-size: 42px; font-weight: 700; line-height: 1.3; }
@@ -82,6 +86,11 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
     }
     @media (max-width: 767px) {
         .transactions-hero { padding: 72px 0 48px; }
+        .transactions-hero .container.finwert-page-hero-layout { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; }
+        .transactions-hero .container.finwert-page-hero-layout > h1,
+        .transactions-hero .container.finwert-page-hero-layout > .transactions-breadcrumb,
+        .transactions-hero .container.finwert-page-hero-layout > .finwert-page-slogan { grid-column: 1; grid-row: auto; }
+        .transactions-hero .container.finwert-page-hero-layout > .transactions-breadcrumb { margin-top: -14px; }
         .transactions-hero h1 { font-size: 30px; line-height: 1.24; }
         .transactions-intro { padding: 68px 0; }
         .transactions-intro h2 { font-size: 32px; }
@@ -94,9 +103,10 @@ $lifecycle = ['Strategy', 'Preparation', 'Valuation', 'Due Diligence', 'Structur
 
 <main class="transactions-page">
     <section class="transactions-hero">
-        <div class="container">
+        <div class="container finwert-page-hero-layout">
             <h1>Transactions</h1>
-            <div class="transactions-breadcrumb"><a href="index.php">Home</a><span>/</span><span>Transactions</span></div>
+            <nav class="transactions-breadcrumb" aria-label="Breadcrumb"><a href="index.php">Home</a><span>/</span><span aria-current="page">Transactions</span></nav>
+            <?php include __DIR__ . '/includes/page-hero-slogan.php'; ?>
         </div>
     </section>
 

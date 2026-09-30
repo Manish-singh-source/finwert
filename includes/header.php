@@ -30,7 +30,7 @@ $isFinwertServicesPage = in_array($currentPage, ['services.php', 'service-single
     </div>
 
     <header>
-        <div id="vl-header-sticky" class="vl-header-area<?php echo ($isFinwertServicesPage || in_array($currentPage, ['team.php', 'contact.php', 'clients.php'], true)) ? '' : ' vl-transparent-header'; ?>">
+        <div id="vl-header-sticky" class="vl-header-area<?php echo ($isFinwertServicesPage || in_array($currentPage, ['team.php', 'contact.php', 'clients.php', 'about-us.php'], true)) ? '' : ' vl-transparent-header'; ?>">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-md-6 col-6">
