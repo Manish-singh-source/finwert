@@ -958,7 +958,7 @@ require __DIR__ . '/includes/header.php';
                                         alt="">
 
                                     <div class="content">
-                                        <h4 class="title"><a href="team.php">75+ Professionals</a></h4>
+                                        <h4 class="title"><a href="team.php">150+ Professionals</a></h4>
                                         <p class="position">Finance, Compliance & Accounting</p>
                                     </div>
                                 </div>
@@ -976,9 +976,9 @@ require __DIR__ . '/includes/header.php';
                             complexity, uncover opportunities, & keep you ahead of the curve. Because behind great
                             business is an accountant who sees the full picture.</p>
                         <!-- btn 7 -->
-                        <a href="contact.php" class="vl-primary-btn-7"> <span class="arrow-1"><i
+                        <!-- <a href="contact.php" class="vl-primary-btn-7"> <span class="arrow-1"><i
                                     class="fa-solid fa-arrow-right"></i></span>Talk To Us <span
-                                class="arrow-2"><i class="fa-solid fa-arrow-right"></i></span></a>
+                                class="arrow-2"><i class="fa-solid fa-arrow-right"></i></span></a> -->
                     </div>
                 </div>
             </div>
@@ -1426,9 +1426,7 @@ nationwide.</p>
                             </div>
                             <div class="solution__wrapbox2-content">
                                 <h4 class="title">Dedicated Team</h4>
-                                <p class="para">100+ qualified 
-professionals including 
-CAs, CSs, and analysts.</p>
+                                <p class="para">150+ experienced team members, including CAs, CSs, and analysts.</p>
                             </div>
                         </div>
                          <div class="solution__wrapbox2">

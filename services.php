@@ -145,33 +145,48 @@ $serviceLinks = [
     .services-title h2 { margin: 0; color: #061f58; font-size: 42px; font-weight: 700; line-height: 1.28; }
     .services-title p { margin: 18px 0 0; color: #516173; font-size: 17px; line-height: 1.85; }
     .service-directory-card {
+        position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+        min-height: 510px;
         height: 100%;
         overflow: hidden;
-        background: #fff;
-        border: 1px solid rgba(15,72,133,.12);
-        box-shadow: 0 14px 34px rgba(12,46,91,.08);
-        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        isolation: isolate;
+        border: 1px solid rgba(255,255,255,.45);
+        border-radius: 56px 0 56px 0;
+        background: #172333;
+        box-shadow: 0 18px 46px rgba(24,35,49,.16);
+        transition: transform .4s cubic-bezier(.2,.75,.25,1), box-shadow .4s ease;
     }
-    .service-directory-card:hover { transform: translateY(-7px); border-color: rgba(22,140,255,.4); box-shadow: 0 20px 46px rgba(12,46,91,.13); }
-    .service-directory-card .thumb { position: relative; display: block; height: 238px; overflow: hidden; }
-    .service-directory-card .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
-    .service-directory-card:hover .thumb img { transform: scale(1.06); }
-    .service-directory-card .icon { position: absolute; left: 24px; bottom: -31px; display: inline-flex; align-items: center; justify-content: center; width: 62px; height: 62px; background: #e9f4ff; box-shadow: 0 10px 25px rgba(6,31,88,.12); }
-    .service-directory-card .icon img { max-width: 34px; max-height: 34px; }
-    .service-directory-card .content { display: flex; flex: 1; flex-direction: column; padding: 48px 28px 28px; }
-    .service-directory-card h3 { margin: 0; color: #061f58; font-size: 24px; font-weight: 700; line-height: 1.35; }
-    .service-directory-card p { margin: 14px 0 0; color: #516173; font-size: 15.5px; line-height: 1.75; }
-    .service-directory-card .meta { margin-top: 16px; color: #168cff; font-size: 13px; font-weight: 600; text-transform: uppercase; }
-    .service-directory-card .explore { display: inline-flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 24px; color: #061f58; font-weight: 600; }
-    .service-directory-card .explore i {
-        font-family: "Poppins", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1;
-    }
+    .service-directory-card::before,
+    .service-directory-card::after { display: none; }
+    .service-directory-card:hover { transform: translateY(-10px); box-shadow: 0 28px 64px rgba(24,35,49,.25); }
+    .service-directory-card .thumb { position: absolute; inset: 0; z-index: -2; display: block; overflow: hidden; }
+    .service-directory-card .thumb::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(15,24,34,.02) 20%, rgba(15,24,34,.12) 48%, rgba(15,24,34,.88) 100%); }
+    .service-directory-card .thumb > img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s cubic-bezier(.2,.7,.2,1), filter .4s ease; }
+    .service-directory-card:hover .thumb > img { transform: scale(1.075); filter: saturate(1.08); }
+    .service-directory-card .icon { position: absolute; top: 20px; right: 20px; z-index: 2; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border: 1px solid rgba(255,255,255,.5); border-radius: 16px 16px 16px 5px; background: rgba(255,255,255,.88); box-shadow: 0 10px 25px rgba(2,22,58,.15); backdrop-filter: blur(10px); opacity: 0; transform: translateY(-12px); transition: opacity .3s ease, transform .35s ease; }
+    .service-directory-card .icon img { max-width: 27px; max-height: 27px; }
+    .service-directory-card .card-number { position: absolute; top: 19px; left: 22px; color: rgba(255,255,255,.9); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-shadow: 0 2px 12px rgba(2,18,48,.45); opacity: 0; transform: translateY(-12px); transition: opacity .3s ease, transform .35s ease; }
+    .service-directory-card:hover .icon,
+    .service-directory-card:hover .card-number,
+    .service-directory-card:focus-visible .icon,
+    .service-directory-card:focus-visible .card-number { opacity: 1; transform: translateY(0); }
+    .service-directory-card .preview-title { position: absolute; right: 24px; bottom: 28px; left: 24px; z-index: 2; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.7); transition: opacity .25s ease, transform .35s ease; }
+    .service-directory-card .preview-title h3 { margin: 0; color: #fff; font-size: 23px; font-weight: 700; line-height: 1.35; text-shadow: 0 3px 18px rgba(7,17,28,.5); }
+    .service-directory-card .content { position: absolute; right: 12px; bottom: 12px; left: 12px; z-index: 3; display: flex; flex-direction: column; padding: 24px 22px 21px; border: 1px solid rgba(255,255,255,.72); border-radius: 34px 0 34px 0; background: rgba(249,251,252,.94); box-shadow: 0 18px 42px rgba(15,27,40,.23); backdrop-filter: blur(16px); opacity: 0; visibility: hidden; transform: translateY(72px); transition: transform .42s cubic-bezier(.2,.75,.25,1), opacity .3s ease, visibility .3s ease; }
+    .service-directory-card:hover .content,
+    .service-directory-card:focus-visible .content { opacity: 1; visibility: visible; transform: translateY(0); }
+    .service-directory-card:hover .preview-title,
+    .service-directory-card:focus-visible .preview-title { opacity: 0; transform: translateY(-18px); }
+    .service-directory-card .content h3 { margin: 9px 0 0; color: #172d49; font-size: 22px; font-weight: 700; line-height: 1.34; text-shadow: none; }
+    .service-directory-card p { margin: 10px 0 0; color: #596675; font-size: 14px; line-height: 1.7; }
+    .service-directory-card .meta { align-self: flex-start; padding: 6px 10px; border: 1px solid rgba(77,124,156,.2); border-radius: 999px; background: #eaf1f5; color: #44677e; font-size: 10px; font-weight: 700; line-height: 1.4; text-transform: uppercase; letter-spacing: .06em; }
+    .service-directory-card .explore { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; padding-top: 15px; border-top: 1px solid rgba(36,58,78,.12); color: #263f58; font-size: 13px; font-weight: 600; }
+    .service-directory-card .explore i { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 50%; background: #315c76; color: #fff; font-family: "Poppins", Arial, sans-serif; font-size: 16px; font-style: normal; line-height: 1; transition: transform .3s ease, background .3s ease; }
     .service-directory-card .explore i::before { content: "\2192"; }
-    .service-directory-card:hover .explore { color: #168cff; }
+    .service-directory-card:hover .explore i { transform: translateX(4px); background: #172d49; }
     .tier-card { height: 100%; padding: 34px; background: #061f58; color: #fff; }
     .tier-card h3 { margin: 0; color: #fff; font-size: 28px; font-weight: 700; line-height: 1.3; }
     .tier-card p { margin: 16px 0 24px; color: rgba(255,255,255,.76); line-height: 1.75; }
@@ -324,6 +339,10 @@ $serviceLinks = [
         .services-section { padding: 68px 0; }
         .services-title h2 { font-size: 32px; }
         .journey-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+        .service-directory-card { min-height: 470px; border-radius: 44px 0 44px 0; }
+        .service-directory-card .content { right: 10px; bottom: 10px; left: 10px; padding: 20px 18px 18px; border-radius: 28px 0 28px 0; }
+        .service-directory-card .preview-title h3,
+        .service-directory-card .content h3 { font-size: 21px; }
         .finwert-business-gallery .pannel-contarea,
         .finwert-business-gallery .panel-tag { padding-right: 24px; padding-left: 24px; }
     }
@@ -372,13 +391,15 @@ $serviceLinks = [
                 <p>Every service links to a detailed page with overview, situations addressed, capabilities, process, deliverables, related services, and FAQs.</p>
             </div>
             <div class="row g-4">
-                <?php foreach ($finwertServices as $slug => $service) : ?>
+                <?php $serviceIndex = 0; foreach ($finwertServices as $slug => $service) : $serviceIndex++; ?>
                     <div class="col-xl-4 col-md-6">
                         <a id="<?php echo htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?>" class="service-directory-card" href="<?php echo htmlspecialchars(($serviceLinks[$slug] ?? '#' . $slug), ENT_QUOTES, 'UTF-8'); ?>">
                             <span class="thumb">
                                 <img src="<?php echo htmlspecialchars($service['thumb'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?>">
                                 <span class="icon"><img src="<?php echo htmlspecialchars($service['icon'], ENT_QUOTES, 'UTF-8'); ?>" alt=""></span>
                             </span>
+                            <span class="card-number"><?php echo str_pad((string) $serviceIndex, 2, '0', STR_PAD_LEFT); ?></span>
+                            <span class="preview-title"><h3><?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?></h3></span>
                             <span class="content">
                                 <span class="meta"><?php echo htmlspecialchars($service['stage'], ENT_QUOTES, 'UTF-8'); ?></span>
                                 <h3><?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?></h3>

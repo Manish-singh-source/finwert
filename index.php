@@ -57,6 +57,21 @@ $finwertServiceLinks = [
     'tax-advisory' => 'service-single-tax-advisory.php',
     'corporate' => 'service-single-corporate.php',
 ];
+
+$finwertClients = [];
+$clientLogoFiles = glob(__DIR__ . '/assets/img/logo/*.{png,jpg,jpeg,webp,svg}', GLOB_BRACE) ?: [];
+foreach ($clientLogoFiles as $clientLogoFile) {
+    $clientLogoFilename = basename($clientLogoFile);
+    if (in_array(strtolower($clientLogoFilename), ['logo.png', 'fav.png', 'banner.png'], true)) {
+        continue;
+    }
+
+    $clientName = ucwords(str_replace(['-', '_'], ' ', pathinfo($clientLogoFilename, PATHINFO_FILENAME)));
+    $finwertClients[$clientName] = 'assets/img/logo/' . $clientLogoFilename;
+}
+ksort($finwertClients, SORT_NATURAL | SORT_FLAG_CASE);
+$finwertClientRows = array_chunk($finwertClients, (int) ceil(max(count($finwertClients), 1) / 2), true);
+
 require __DIR__ . '/includes/header.php';
 
 ?>
@@ -106,6 +121,97 @@ require __DIR__ . '/includes/header.php';
     .finwert-cofounder-section .container {
         position: relative;
         z-index: 1;
+    }
+    .finwert-home-clients {
+        position: relative;
+        overflow: hidden;
+        padding: 72px 0;
+        background: linear-gradient(145deg, #f6faff 0%, #edf5ff 48%, #fff 100%);
+    }
+    .finwert-home-clients::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(6, 71, 152, .12) 1.4px, transparent 1.5px);
+        background-size: 22px 22px;
+        -webkit-mask-image: linear-gradient(90deg, #000, transparent 30%, transparent 70%, #000);
+        mask-image: linear-gradient(90deg, #000, transparent 30%, transparent 70%, #000);
+    }
+    .finwert-home-clients-heading {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto 36px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .finwert-home-clients-heading span {
+        display: block;
+        margin-bottom: 8px;
+        color: #2478f0;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+    }
+    .finwert-home-clients-heading h2 {
+        margin: 0;
+        color: #14264a;
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 700;
+        line-height: 1.25;
+    }
+    .finwert-home-clients-viewport {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 16px;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+        mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+    }
+    .finwert-home-clients-track {
+        display: flex;
+        width: max-content;
+        will-change: transform;
+        animation: finwert-clients-left 90s linear infinite;
+    }
+    .finwert-home-clients-row:first-child .finwert-home-clients-track {
+        animation-name: finwert-clients-right;
+    }
+    .finwert-home-clients-group {
+        display: flex;
+        flex-shrink: 0;
+        gap: 16px;
+        padding-right: 16px;
+    }
+    .finwert-home-client-logo {
+        display: flex;
+        width: 190px;
+        height: 100px;
+        flex: 0 0 190px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border: 1px solid #e3edf8;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, .94);
+        box-shadow: 0 10px 24px rgba(20, 60, 120, .07);
+    }
+    .finwert-home-client-logo img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 72px;
+        object-fit: contain;
+    }
+    @keyframes finwert-clients-left {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(-50%, 0, 0); }
+    }
+    @keyframes finwert-clients-right {
+        from { transform: translate3d(-50%, 0, 0); }
+        to { transform: translate3d(0, 0, 0); }
     }
     .finwert-cofounder-section .row { --bs-gutter-x: 64px; }
     .finwert-cofounder-panel {
@@ -204,6 +310,16 @@ require __DIR__ . '/includes/header.php';
         .finwert-cofounder-panel { min-height: 330px; padding: 34px 26px; }
         .finwert-cofounder-panel h2 { font-size: 38px; }
         .finwert-cofounder-grid { grid-template-columns: 1fr; }
+        .finwert-home-clients { padding: 56px 0; }
+        .finwert-home-clients-heading { margin-bottom: 28px; }
+        .finwert-home-clients-viewport { gap: 12px; }
+        .finwert-home-clients-group { gap: 12px; padding-right: 12px; }
+        .finwert-home-client-logo { width: 148px; height: 82px; flex-basis: 148px; padding: 10px 12px; }
+        .finwert-home-client-logo img { max-height: 58px; }
+        .finwert-home-clients-track { animation-duration: 76s; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .finwert-home-clients-track { animation-play-state: paused; }
     }
 </style>
 <main>
@@ -332,7 +448,7 @@ require __DIR__ . '/includes/header.php';
                         <div class="finwert-cofounder-grid">
                             <a href="service-single-accounting.php">Accurate Books</a>
                             <a href="service-single-virtual-cfo.php">Financial Planning</a>
-                            <a href="service-single-debt-fundraising.php">Lender Readiness</a>
+                            <a href="service-single-debt-fundraising.php">Funding Readiness</a>
                             <a href="service-single-due-diligence.php">Risk Visibility</a>
                             <a href="service-single-tax-advisory.php">Tax Clarity</a>
                             <a href="service-single-growth-capital.php">Investor Confidence</a>
@@ -343,6 +459,32 @@ require __DIR__ . '/includes/header.php';
         </div>
     </section>
     <!--================= Banner section End =================-->
+
+    <?php if (!empty($finwertClients)): ?>
+        <section class="finwert-home-clients" aria-labelledby="finwert-home-clients-title">
+            <div class="finwert-home-clients-heading" data-sal="slide-up" data-sal-duration="900">
+                <span>Our Clientele</span>
+                <h2 id="finwert-home-clients-title">Trusted by ambitious businesses</h2>
+            </div>
+            <div class="finwert-home-clients-viewport" data-sal="slide-up" data-sal-duration="900" data-sal-delay="100">
+                <?php foreach ($finwertClientRows as $rowIndex => $clientRow): ?>
+                    <div class="finwert-home-clients-row">
+                        <div class="finwert-home-clients-track">
+                            <?php for ($copy = 0; $copy < 2; $copy++): ?>
+                                <div class="finwert-home-clients-group"<?php echo $copy === 1 ? ' aria-hidden="true"' : ''; ?>>
+                                    <?php foreach ($clientRow as $clientName => $clientLogo): ?>
+                                        <div class="finwert-home-client-logo">
+                                            <img src="<?php echo htmlspecialchars($clientLogo, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo $copy === 0 ? htmlspecialchars($clientName, ENT_QUOTES, 'UTF-8') : ''; ?>" loading="lazy">
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endfor; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+    <?php endif; ?>
 
      <!--================= About section start =================-->
         <section class="finwert-home-about vl-about-area pt-100 pb-70">
@@ -505,6 +647,7 @@ require __DIR__ . '/includes/header.php';
         </section>
         <!--================= Service section End =================-->
 
+    <?php if (false): // Why choose us section temporarily disabled. ?>
     <!--================= Why choose us section start =================-->
     <section class="vl-choose-area vkl-gray-white-bg finwert-why-section fix pt-100 pb-70">
             <div class="container">
@@ -621,6 +764,7 @@ require __DIR__ . '/includes/header.php';
             </div>
         </section>
     <!--================= Why choose us section End =================-->
+    <?php endif; ?>
 
     
 
