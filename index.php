@@ -8,12 +8,12 @@ $finwertServices = [
     'virtual-cfo' => [
         'title' => 'Virtual CFO Services',
         'short' => 'CFO-level finance guidance, planning, controls, MIS, compliance, and decision support without building a full internal CFO office.',
-        'image' => 'assets/img/myimage/02_Virtual_CFO_Services.jpg',
+        'image' => 'assets/img/myimage/02_Virtual_CFO_Services.png',
     ],
     'debt-fundraising' => [
         'title' => 'Debt Financing',
         'short' => 'Structured debt support for working capital, expansion, acquisition, and project financing needs.',
-        'image' => 'assets/img/myimage/03_Debt_Fundraising.jpg',
+        'image' => 'assets/img/myimage/03_Debt_Fundraising.png',
     ],
     'growth-capital' => [
         'title' => 'Capital Market, Fundraising & IPO Advisory',
@@ -56,6 +56,17 @@ $finwertServiceLinks = [
     'legal-secretarial' => 'service-single-legal-secretarial.php',
     'tax-advisory' => 'service-single-tax-advisory.php',
     'corporate' => 'service-single-corporate.php',
+];
+$finwertServiceIcons = [
+    'startup-solutions' => 'fa-rocket',
+    'virtual-cfo' => 'fa-chart-pie',
+    'debt-fundraising' => 'fa-hand-holding-dollar',
+    'growth-capital' => 'fa-building-columns',
+    'accounting-financial' => 'fa-calculator',
+    'due-diligence' => 'fa-magnifying-glass-chart',
+    'legal-secretarial' => 'fa-scale-balanced',
+    'tax-advisory' => 'fa-file-invoice-dollar',
+    'corporate' => 'fa-briefcase',
 ];
 
 $finwertClients = [];
@@ -101,6 +112,18 @@ require __DIR__ . '/includes/header.php';
     .finwert-service-card:focus-visible {
         outline: 3px solid #168cff;
         outline-offset: 4px;
+    }
+    .finwert-service-grid.swiper {
+        display: block;
+        overflow: hidden;
+    }
+    .finwert-service-grid .swiper-slide {
+        display: flex;
+        height: auto;
+    }
+    .finwert-service-grid .finwert-service-card {
+        height: 100%;
+        width: 100%;
     }
     .finwert-cofounder-section {
         --cofounder-ice: #9fd0ff;
@@ -342,70 +365,36 @@ require __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <div class="finwert-service-grid">
-                    <a href="service-single-growth-capital.php" class="finwert-service-card" data-sal="slide-up" data-sal-duration="900" data-sal-delay="100"
-                        data-sal-easing="ease-in-out">
-                        <div class="finwert-card-content">
-                            <div class="finwert-card-top">
-                                <span class="finwert-card-number">01</span>
-                                <span class="finwert-card-line"></span>
-                                <span class="finwert-card-icon"><i class="fa-solid fa-building-columns"></i></span>
+                <div class="swiper finwert-service-grid">
+                    <div class="swiper-wrapper">
+                        <?php $serviceIndex = 0; ?>
+                        <?php foreach ($finwertServices as $serviceKey => $service): ?>
+                            <?php
+                            $serviceIndex++;
+                            $serviceTitle = htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8');
+                            $serviceImage = htmlspecialchars($service['image'], ENT_QUOTES, 'UTF-8');
+                            $serviceDescription = htmlspecialchars($service['short'], ENT_QUOTES, 'UTF-8');
+                            $serviceUrl = htmlspecialchars($finwertServiceLinks[$serviceKey], ENT_QUOTES, 'UTF-8');
+                            $serviceIcon = htmlspecialchars($finwertServiceIcons[$serviceKey], ENT_QUOTES, 'UTF-8');
+                            ?>
+                            <div class="swiper-slide">
+                                <a href="<?= $serviceUrl ?>" class="finwert-service-card">
+                                    <div class="finwert-card-content">
+                                        <div class="finwert-card-top">
+                                            <span class="finwert-card-number"><?= str_pad((string) $serviceIndex, 2, '0', STR_PAD_LEFT) ?></span>
+                                            <span class="finwert-card-line"></span>
+                                            <span class="finwert-card-icon"><i class="fa-solid <?= $serviceIcon ?>"></i></span>
+                                        </div>
+                                        <h3><?= $serviceTitle ?></h3>
+                                        <p><?= $serviceDescription ?></p>
+                                    </div>
+                                    <div class="finwert-card-image">
+                                        <img src="<?= $serviceImage ?>" alt="<?= $serviceTitle ?>">
+                                    </div>
+                                </a>
                             </div>
-                            <h3>Capital Market, Fundraising &amp; IPO Advisory</h3>
-                            <p>Investor-ready financial storytelling, capital structuring, and listing-readiness support.</p>
-                        </div>
-                        <div class="finwert-card-image">
-                            <img src="assets/img/b1.png" alt="Growth capital advisory">
-                        </div>
-                    </a>
-
-                    <a href="service-single-startup-solutions.php" class="finwert-service-card" data-sal="slide-up" data-sal-duration="900" data-sal-delay="180"
-                        data-sal-easing="ease-in-out">
-                        <div class="finwert-card-content">
-                            <div class="finwert-card-top">
-                                <span class="finwert-card-number">02</span>
-                                <span class="finwert-card-line"></span>
-                                <span class="finwert-card-icon"><i class="fa-solid fa-rocket"></i></span>
-                            </div>
-                            <h3>Startup Solutions</h3>
-                            <p>Company incorporation, finance setup, compliance, and founder support from day one.</p>
-                        </div>
-                        <div class="finwert-card-image">
-                            <img src="assets/img/b2.png" alt="Startup advisory meeting">
-                        </div>
-                    </a>
-
-                    <a href="service-single-virtual-cfo.php" class="finwert-service-card" data-sal="slide-up" data-sal-duration="900" data-sal-delay="260"
-                        data-sal-easing="ease-in-out">
-                        <div class="finwert-card-content">
-                            <div class="finwert-card-top">
-                                <span class="finwert-card-number">03</span>
-                                <span class="finwert-card-line"></span>
-                                <span class="finwert-card-icon"><i class="fa-solid fa-chart-pie"></i></span>
-                            </div>
-                            <h3>Virtual CFO Services</h3>
-                            <p>On-demand CFO leadership for MIS, forecasting, board reporting, and strategic decisions.</p>
-                        </div>
-                        <div class="finwert-card-image">
-                            <img src="assets/img/b3.png" alt="Virtual CFO dashboard">
-                        </div>
-                    </a>
-
-                    <a href="service-single-accounting.php" class="finwert-service-card" data-sal="slide-up" data-sal-duration="900" data-sal-delay="340"
-                        data-sal-easing="ease-in-out">
-                        <div class="finwert-card-content">
-                            <div class="finwert-card-top">
-                                <span class="finwert-card-number">04</span>
-                                <span class="finwert-card-line"></span>
-                                <span class="finwert-card-icon"><i class="fa-solid fa-calculator"></i></span>
-                            </div>
-                            <h3>Accounting &amp; Financial Services</h3>
-                            <p>Clean books, reporting discipline, controls, and compliance aligned to growth plans.</p>
-                        </div>
-                        <div class="finwert-card-image">
-                            <img src="assets/img/b4.png" alt="Accounting and financial services">
-                        </div>
-                    </a>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
 
                 <div class="finwert-stats-strip" data-sal="slide-up" data-sal-duration="900" data-sal-delay="180"
@@ -587,6 +576,7 @@ require __DIR__ . '/includes/header.php';
             </div>
 </section>
 
+        <?php if (false): // Services showcase temporarily disabled. ?>
   <!--================= Service section start =================-->
         <section class="vkl-gray-bg-16 comn-relative fix pt-100 pb-100 finwert-services-showcase">
             <div class="container">
@@ -646,6 +636,7 @@ require __DIR__ . '/includes/header.php';
             </div>
         </section>
         <!--================= Service section End =================-->
+        <?php endif; ?>
 
     <?php if (false): // Why choose us section temporarily disabled. ?>
     <!--================= Why choose us section start =================-->
@@ -780,6 +771,27 @@ require __DIR__ . '/includes/header.php';
     </div> 
 
    </main>
+
+<script>
+    window.addEventListener('load', function () {
+        new Swiper('.finwert-service-grid', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            keyboard: { enabled: true },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+                1200: { slidesPerView: 4 }
+            }
+        });
+    });
+</script>
 
 <?php
 require __DIR__ . '/includes/footer.php';

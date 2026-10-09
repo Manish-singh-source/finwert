@@ -11,14 +11,14 @@ $finwertServices = [
     'virtual-cfo' => [
         'title' => 'Virtual CFO Services',
         'short' => 'CFO-level finance guidance, planning, controls, MIS, compliance, and decision support without building a full internal CFO office.',
-        'thumb' => 'assets/img/myimage/02_Virtual_CFO_Services.jpg',
+        'thumb' => 'assets/img/myimage/02_Virtual_CFO_Services.png',
         'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.1.png',
         'stage' => 'Growth and scaling',
     ],
     'debt-fundraising' => [
         'title' => 'Debt Financing',
         'short' => 'Structured debt support for working capital, expansion, acquisition, and project financing needs.',
-        'thumb' => 'assets/img/myimage/03_Debt_Fundraising.jpg',
+        'thumb' => 'assets/img/myimage/03_Debt_Fundraising.png',
         'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.2.png',
         'stage' => 'Working capital and expansion',
     ],
@@ -60,7 +60,7 @@ $finwertServices = [
     'corporate' => [
         'title' => 'Corporate Services',
         'short' => 'Strategic guidance and digital solutions for corporate finance and business goals.',
-        'thumb' => 'assets/img/myimage/09_Corporate_Services.jpg',
+        'thumb' => 'assets/img/myimage/09_Corporate_Services.png',
         'icon' => 'assets/img/corporateconsulting/icon/vl-service-icon-5.3.png',
         'stage' => 'Corporate finance and business support',
     ],
