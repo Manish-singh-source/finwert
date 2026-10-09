@@ -222,10 +222,12 @@ require __DIR__ . '/includes/header.php';
         </div>
     </section>
     <dialog class="finwert-profile-dialog" id="teamProfileDialog" aria-labelledby="teamProfileName">
+        <button class="finwert-profile-nav finwert-profile-prev" type="button" aria-label="View previous team member">&#8592;</button>
+        <button class="finwert-profile-nav finwert-profile-next" type="button" aria-label="View next team member">&#8594;</button>
         <div class="finwert-profile-layout">
             <button class="finwert-profile-close" type="button" aria-label="Close profile" autofocus>&times;</button>
             <img class="finwert-profile-photo" alt="">
-            <div class="finwert-profile-copy">
+            <div class="finwert-profile-copy" aria-live="polite">
                 <h2 id="teamProfileName"></h2>
                 <strong class="finwert-profile-role"></strong>
                 <p class="finwert-profile-location"></p>
@@ -239,43 +241,72 @@ require __DIR__ . '/includes/header.php';
 <script>
 (() => {
     const dialog = document.getElementById('teamProfileDialog');
+    const profileButtons = Array.from(document.querySelectorAll('.finwert-team-card-image'));
     let trigger;
     let previousOverflow;
-    document.querySelectorAll('.finwert-team-card-image').forEach((button) => {
+    let activeProfileIndex = 0;
+    let touchStartX = 0;
+
+    const showProfile = (index) => {
+        activeProfileIndex = (index + profileButtons.length) % profileButtons.length;
+        const button = profileButtons[activeProfileIndex];
+        const content = button.closest('.finwert-team-card').querySelector('.finwert-team-card-content');
+        const portrait = button.querySelector('img');
+        dialog.querySelector('#teamProfileName').textContent = content.querySelector('h2').textContent;
+        dialog.querySelector('.finwert-profile-role').textContent = content.querySelector('.role').textContent;
+        const locationEl = dialog.querySelector('.finwert-profile-location');
+        const locationContent = content.querySelector('.location');
+        locationEl.textContent = locationContent ? locationContent.textContent : '';
+        const linkedinEl = dialog.querySelector('.finwert-profile-linkedin');
+        const linkedinContent = content.querySelector('a[href*="linkedin.com"]');
+        linkedinEl.replaceChildren();
+        if (linkedinContent) linkedinEl.appendChild(linkedinContent.cloneNode(true));
+        const photo = dialog.querySelector('.finwert-profile-photo');
+        photo.src = portrait.src;
+        photo.alt = portrait.alt;
+        dialog.querySelector('.finwert-profile-bio').replaceChildren(
+            ...Array.from(content.querySelectorAll('p:not(.role):not(.location):not(.finwert-profile-linkedin)'), (paragraph) => {
+                if (paragraph.querySelector('a[href*="linkedin.com"]')) return null;
+                return paragraph.cloneNode(true);
+            }).filter(Boolean)
+        );
+    };
+
+    profileButtons.forEach((button, index) => {
+        const card = button.closest('.finwert-team-card');
+        const content = card.querySelector('.finwert-team-card-content');
+        const summary = document.createElement('div');
+        const name = document.createElement('h3');
+        const role = document.createElement('p');
+        summary.className = 'finwert-team-card-summary';
+        name.textContent = content.querySelector('h2').textContent;
+        role.textContent = content.querySelector('.role').textContent;
+        summary.append(name, role);
+        card.appendChild(summary);
+
         button.addEventListener('click', () => {
-            const content = button.closest('.finwert-team-card').querySelector('.finwert-team-card-content');
-            const portrait = button.querySelector('img');
-            dialog.querySelector('#teamProfileName').textContent = content.querySelector('h2').textContent;
-            dialog.querySelector('.finwert-profile-role').textContent = content.querySelector('.role').textContent;
-            const locationEl = dialog.querySelector('.finwert-profile-location');
-            const locationContent = content.querySelector('.location');
-            if (locationContent) {
-                locationEl.textContent = locationContent.textContent;
-            } else {
-                locationEl.textContent = '';
-            }
-            const linkedinEl = dialog.querySelector('.finwert-profile-linkedin');
-            const linkedinContent = content.querySelector('a[href*="linkedin.com"]');
-            linkedinEl.replaceChildren();
-            if (linkedinContent) {
-                linkedinEl.appendChild(linkedinContent.cloneNode(true));
-            }
-            const photo = dialog.querySelector('.finwert-profile-photo');
-            photo.src = portrait.src;
-            photo.alt = portrait.alt;
-            dialog.querySelector('.finwert-profile-bio').replaceChildren(
-                ...Array.from(content.querySelectorAll('p:not(.role):not(.location):not(.finwert-profile-linkedin)'), (paragraph) => {
-                    if (paragraph.querySelector('a[href*="linkedin.com"]')) return null;
-                    return paragraph.cloneNode(true);
-                }).filter(Boolean)
-            );
             trigger = button;
+            showProfile(index);
             previousOverflow = document.body.style.overflow;
             document.body.style.overflow = 'hidden';
             dialog.showModal();
         });
     });
+    dialog.querySelector('.finwert-profile-prev').addEventListener('click', () => showProfile(activeProfileIndex - 1));
+    dialog.querySelector('.finwert-profile-next').addEventListener('click', () => showProfile(activeProfileIndex + 1));
     dialog.querySelector('.finwert-profile-close').addEventListener('click', () => dialog.close());
+    dialog.querySelector('.finwert-profile-layout').addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+    dialog.querySelector('.finwert-profile-layout').addEventListener('touchend', (event) => {
+        const distance = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(distance) < 50) return;
+        showProfile(activeProfileIndex + (distance < 0 ? 1 : -1));
+    }, { passive: true });
+    dialog.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') showProfile(activeProfileIndex - 1);
+        if (event.key === 'ArrowRight') showProfile(activeProfileIndex + 1);
+    });
     dialog.addEventListener('click', (event) => {
         const bounds = dialog.getBoundingClientRect();
         if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();

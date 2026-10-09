@@ -706,7 +706,7 @@ require __DIR__ . '/includes/header.php';
     }
 
     .finwert-about-page .finwert-benefits-section .service-tab-wrap-content {
-        background: rgba(7, 31, 88, .88);
+        background: rgba(7, 31, 88, .50);
     }
 
     .finwert-about-page .finwert-benefits-section .service-tab-wrap-content .content .title {
@@ -1323,7 +1323,7 @@ require __DIR__ . '/includes/header.php';
                         </div>
                         <div class="tab-pane fade" id="v-pills-custom" role="tabpanel" aria-labelledby="v-pills-custom-tab" tabindex="0">
                             <div class="service-tab-wrap">
-                                <div class="service-tab-wrap-thumb"><img class="w-100" src="assets/img/myimage/b4.png" alt="Customized financial support"></div>
+                                <div class="service-tab-wrap-thumb"><img class="w-100" src="assets/img/myimage/b6   .png" alt="Customized financial support"></div>
                                 <div class="service-tab-wrap-content">
                                     <div class="icon"><span><i class="fa-solid fa-puzzle-piece"></i></span></div>
                                     <div class="content">
