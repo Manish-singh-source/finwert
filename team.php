@@ -231,8 +231,9 @@ require __DIR__ . '/includes/header.php';
                 <h2 id="teamProfileName"></h2>
                 <strong class="finwert-profile-role"></strong>
                 <p class="finwert-profile-location"></p>
-                <p class="finwert-profile-linkedin"></p>
+                <p class="finwert-profile-motto"></p>
                 <div class="finwert-profile-bio"></div>
+                <p class="finwert-profile-linkedin"></p>
             </div>
         </div>
     </dialog>
@@ -246,6 +247,21 @@ require __DIR__ . '/includes/header.php';
     let previousOverflow;
     let activeProfileIndex = 0;
     let touchStartX = 0;
+    const teamMottos = {
+        'Ronak N. Dharnidharka': 'Turn financial complexity into confident decisions.',
+        'Pratik M. Choudhary': 'Strong foundations create sustainable businesses.',
+        'Vikesh Agrawal': 'Plan with purpose. Grow with confidence.',
+        'Tarun Kumar Rawat': 'Clarity in compliance builds lasting trust.',
+        'CA Rohit Jangid': 'Build the right process before scaling the outcome.',
+        'Rohit Runthalla': 'Every number should tell a useful story.',
+        'Kapil Pandey': 'Accuracy, consistency and delivery without compromise.',
+        'Shri Ram (Shriram Mundra)': 'Reliable reporting leads to better decisions.',
+        'Yashesh H. Gosher': 'Simplify the process. Strengthen the control.',
+        'Nitesh Karwa': 'Good governance is the foundation of enduring growth.',
+        'Hemant Saini': 'Own every challenge and deliver with discipline.',
+        'Ripen Gala': 'Automate the routine to focus on what matters.',
+        'Megha Agrawal': 'Compliance done right creates peace of mind.'
+    };
 
     const showProfile = (index) => {
         activeProfileIndex = (index + profileButtons.length) % profileButtons.length;
@@ -254,6 +270,7 @@ require __DIR__ . '/includes/header.php';
         const portrait = button.querySelector('img');
         dialog.querySelector('#teamProfileName').textContent = content.querySelector('h2').textContent;
         dialog.querySelector('.finwert-profile-role').textContent = content.querySelector('.role').textContent;
+        dialog.querySelector('.finwert-profile-motto').textContent = teamMottos[content.querySelector('h2').textContent] || '';
         const locationEl = dialog.querySelector('.finwert-profile-location');
         const locationContent = content.querySelector('.location');
         locationEl.textContent = locationContent ? locationContent.textContent : '';

@@ -81,8 +81,6 @@ foreach ($clientLogoFiles as $clientLogoFile) {
     $finwertClients[$clientName] = 'assets/img/logo/' . $clientLogoFilename;
 }
 ksort($finwertClients, SORT_NATURAL | SORT_FLAG_CASE);
-$finwertClientRows = array_chunk($finwertClients, (int) ceil(max(count($finwertClients), 1) / 2), true);
-
 require __DIR__ . '/includes/header.php';
 
 ?>
@@ -126,8 +124,8 @@ require __DIR__ . '/includes/header.php';
         width: 100%;
     }
     .finwert-cofounder-section {
-        --cofounder-ice: #9fd0ff;
-        background: #061f58;
+        --cofounder-ice: #d9ebff;
+        background: linear-gradient(90deg, #69a2dc 0%, #547da7 48%, #304861 100%);
         color: #fff;
         position: relative;
         overflow: hidden;
@@ -138,7 +136,7 @@ require __DIR__ . '/includes/header.php';
         position: absolute;
         inset: 0;
         z-index: -1;
-        background: linear-gradient(90deg, rgba(4, 24, 70, .96), rgba(6, 31, 88, .88) 45%, rgba(4, 25, 70, .96)), linear-gradient(120deg, rgba(22, 140, 255, .24), transparent 54%);
+        background: linear-gradient(90deg, rgba(105, 162, 220, .18), rgba(48, 72, 97, .12));
         pointer-events: none;
     }
     .finwert-cofounder-section .container {
@@ -187,8 +185,8 @@ require __DIR__ . '/includes/header.php';
     .finwert-home-clients-viewport {
         position: relative;
         z-index: 1;
-        display: grid;
-        gap: 16px;
+        width: min(1014px, calc(100% - 32px));
+        margin: 0 auto;
         overflow: hidden;
         -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
         mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
@@ -197,10 +195,7 @@ require __DIR__ . '/includes/header.php';
         display: flex;
         width: max-content;
         will-change: transform;
-        animation: finwert-clients-left 90s linear infinite;
-    }
-    .finwert-home-clients-row:first-child .finwert-home-clients-track {
-        animation-name: finwert-clients-right;
+        animation: finwert-clients-left 180s linear infinite;
     }
     .finwert-home-clients-group {
         display: flex;
@@ -224,17 +219,12 @@ require __DIR__ . '/includes/header.php';
     .finwert-home-client-logo img {
         width: auto;
         max-width: 100%;
-        height: auto;
-        max-height: 72px;
+        height: 72px;
         object-fit: contain;
     }
     @keyframes finwert-clients-left {
         from { transform: translate3d(0, 0, 0); }
         to { transform: translate3d(-50%, 0, 0); }
-    }
-    @keyframes finwert-clients-right {
-        from { transform: translate3d(-50%, 0, 0); }
-        to { transform: translate3d(0, 0, 0); }
     }
     .finwert-cofounder-section .row { --bs-gutter-x: 64px; }
     .finwert-cofounder-panel {
@@ -245,10 +235,10 @@ require __DIR__ . '/includes/header.php';
         position: relative;
         overflow: hidden;
         padding: 54px 52px;
-        border: 1px solid rgba(159, 208, 255, .78);
+        border: 1px solid rgba(217, 235, 255, .72);
         border-radius: 14px;
-        background: linear-gradient(140deg, rgba(5, 28, 76, .72), rgba(4, 24, 70, .84)), url('assets/img/myimage/finance-cofounder-bg.png') center / cover no-repeat;
-        box-shadow: 0 24px 70px rgba(0, 0, 0, .2);
+        background: linear-gradient(140deg, rgba(105, 162, 220, .56), rgba(48, 72, 97, .68)), url('assets/img/myimage/finance-cofounder-bg.png') center / cover no-repeat;
+        box-shadow: 0 20px 50px rgba(31, 57, 83, .16);
     }
     .finwert-cofounder-panel span {
         display: inline-block;
@@ -301,15 +291,15 @@ require __DIR__ . '/includes/header.php';
         min-height: 106px;
         gap: 14px;
         padding: 16px 18px;
-        border: 1px solid rgba(22, 140, 255, .58);
+        border: 1px solid rgba(217, 235, 255, .58);
         border-radius: 10px;
-        background: linear-gradient(135deg, rgba(18, 73, 154, .5), rgba(4, 29, 78, .72));
+        background: linear-gradient(135deg, rgba(105, 162, 220, .56), rgba(48, 72, 97, .62));
         color: #fff;
         font-weight: 700;
         line-height: 1.35;
         transition: .25s ease;
     }
-    .finwert-cofounder-grid a::before { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(145deg, #1d69d8, #0a3a94); color: #fff; font-family: "Font Awesome 6 Pro" !important; font-size: 18px; font-weight: 900; }
+    .finwert-cofounder-grid a::before { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(145deg, #76afe4, #426f9e); color: #fff; font-family: "Font Awesome 6 Pro" !important; font-size: 18px; font-weight: 900; }
     .finwert-cofounder-grid a:nth-child(1)::before { content: "\f1ad"; }
     .finwert-cofounder-grid a:nth-child(2)::before { content: "\f201"; }
     .finwert-cofounder-grid a:nth-child(3)::before { content: "\f51e"; }
@@ -320,7 +310,7 @@ require __DIR__ . '/includes/header.php';
     .finwert-cofounder-grid a:hover {
         transform: translateY(-4px);
         border-color: var(--cofounder-ice);
-        background: linear-gradient(135deg, #0e55b8, #082d76);
+        background: linear-gradient(135deg, rgba(126, 180, 228, .8), rgba(55, 84, 113, .82));
         color: #fff;
     }
     @media (max-width: 991px) {
@@ -335,11 +325,11 @@ require __DIR__ . '/includes/header.php';
         .finwert-cofounder-grid { grid-template-columns: 1fr; }
         .finwert-home-clients { padding: 56px 0; }
         .finwert-home-clients-heading { margin-bottom: 28px; }
-        .finwert-home-clients-viewport { gap: 12px; }
+        .finwert-home-clients-viewport { width: min(308px, calc(100% - 32px)); }
         .finwert-home-clients-group { gap: 12px; padding-right: 12px; }
         .finwert-home-client-logo { width: 148px; height: 82px; flex-basis: 148px; padding: 10px 12px; }
-        .finwert-home-client-logo img { max-height: 58px; }
-        .finwert-home-clients-track { animation-duration: 76s; }
+        .finwert-home-client-logo img { height: 58px; }
+        .finwert-home-clients-track { animation-duration: 150s; }
     }
     @media (prefers-reduced-motion: reduce) {
         .finwert-home-clients-track { animation-play-state: paused; }
@@ -456,21 +446,19 @@ require __DIR__ . '/includes/header.php';
                 <h2 id="finwert-home-clients-title">Trusted by ambitious businesses</h2>
             </div>
             <div class="finwert-home-clients-viewport" data-sal="slide-up" data-sal-duration="900" data-sal-delay="100">
-                <?php foreach ($finwertClientRows as $rowIndex => $clientRow): ?>
-                    <div class="finwert-home-clients-row">
-                        <div class="finwert-home-clients-track">
-                            <?php for ($copy = 0; $copy < 2; $copy++): ?>
-                                <div class="finwert-home-clients-group"<?php echo $copy === 1 ? ' aria-hidden="true"' : ''; ?>>
-                                    <?php foreach ($clientRow as $clientName => $clientLogo): ?>
-                                        <div class="finwert-home-client-logo">
-                                            <img src="<?php echo htmlspecialchars($clientLogo, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo $copy === 0 ? htmlspecialchars($clientName, ENT_QUOTES, 'UTF-8') : ''; ?>" loading="lazy">
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endfor; ?>
-                        </div>
+                <div class="finwert-home-clients-row">
+                    <div class="finwert-home-clients-track">
+                        <?php for ($copy = 0; $copy < 2; $copy++): ?>
+                            <div class="finwert-home-clients-group"<?php echo $copy === 1 ? ' aria-hidden="true"' : ''; ?>>
+                                <?php foreach ($finwertClients as $clientName => $clientLogo): ?>
+                                    <div class="finwert-home-client-logo">
+                                        <img src="<?php echo htmlspecialchars($clientLogo, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo $copy === 0 ? htmlspecialchars($clientName, ENT_QUOTES, 'UTF-8') : ''; ?>" loading="lazy">
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endfor; ?>
                     </div>
-                <?php endforeach; ?>
+                </div>
             </div>
         </section>
     <?php endif; ?>
@@ -547,6 +535,7 @@ require __DIR__ . '/includes/header.php';
                                 </div>
                             </div>
 
+                            <?php /*
                             <div class="d-flex">
                                 <div class="vl-btn-box-flex">
                                     <!-- btn -->
@@ -570,6 +559,7 @@ require __DIR__ . '/includes/header.php';
                                     </div>
                                 </div>
                             </div>
+                            */ ?>
                         </div>
                     </div>
                 </div>

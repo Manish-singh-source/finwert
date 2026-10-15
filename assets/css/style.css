@@ -22981,9 +22981,12 @@ li,
 .finwert-profile-copy { padding: 40px; align-self: center; }
 .finwert-profile-copy h2 { margin: 0 0 7px; color: #071f58; font-size: 28px; line-height: 1.2; }
 .finwert-profile-role { color: #168cff; }
+.finwert-profile-motto { margin: 18px 0 0; padding: 14px 16px; border-left: 3px solid #168cff; background: #f2f7fc; color: #29466f; font-size: 14px; font-style: italic; line-height: 1.55; }
 .finwert-profile-location { margin: 4px 0 0; color: #213861; font-size: 14px; font-weight: 500; }
-.finwert-profile-linkedin { margin: 4px 0 0; font-size: 14px; }
-.finwert-profile-linkedin a { color: #168cff; display: inline-flex; }
+.finwert-profile-linkedin { margin: 22px 0 0; font-size: 14px; }
+.finwert-profile-linkedin a { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; gap: 9px; padding: 10px 16px; border-radius: 10px; background: #147bea; color: #fff; font-weight: 600; transition: background .2s ease, transform .2s ease; }
+.finwert-profile-linkedin a::after { content: "View on LinkedIn"; }
+.finwert-profile-linkedin a:hover { background: #071f58; color: #fff; transform: translateY(-2px); }
 .finwert-profile-bio p { margin: 18px 0 0; color: #455d7b; font-size: 14px; line-height: 1.7; }
 .finwert-profile-close { position: absolute; z-index: 3; top: 12px; right: 12px; width: 40px; height: 40px; border: 1px solid #e1e8f0; border-radius: 50%; background: rgba(255,255,255,.96); color: #213861; font-size: 25px; line-height: 1; cursor: pointer; box-shadow: 0 5px 14px rgba(7,31,88,.1); transition: transform .2s ease, background .2s ease; }
 .finwert-profile-close:hover { transform: rotate(6deg); background: #f2f7fc; }

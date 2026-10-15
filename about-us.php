@@ -557,8 +557,23 @@ require __DIR__ . '/includes/header.php';
         font-weight: 600;
     }
 
+    @media (min-width: 1200px) {
+        .finwert-about-page .finwert-work-template .work-box-grid-7 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .finwert-about-page .finwert-work-template .single__work7-thumb,
+        .finwert-about-page .finwert-work-template .single__work7-thumb img {
+            width: 240px;
+            height: 240px;
+        }
+
+    }
+
     .finwert-about-page .finwert-work-template .work-shape-1,
-    .finwert-about-page .finwert-work-template .work-shape-2 {
+    .finwert-about-page .finwert-work-template .work-shape-2,
+    .finwert-about-page .finwert-work-template .work-shape-3 {
         display: block !important;
         width: 132px;
         height: 64px;
@@ -568,15 +583,17 @@ require __DIR__ . '/includes/header.php';
     }
 
     .finwert-about-page .finwert-work-template .work-shape-1 svg,
-    .finwert-about-page .finwert-work-template .work-shape-2 svg {
+    .finwert-about-page .finwert-work-template .work-shape-2 svg,
+    .finwert-about-page .finwert-work-template .work-shape-3 svg {
         display: block;
-        width: 132px;
-        height: 64px;
+        width: 100%;
+        height: 100%;
         overflow: visible;
     }
 
     .finwert-about-page .finwert-work-template .work-shape-1 path,
-    .finwert-about-page .finwert-work-template .work-shape-2 path {
+    .finwert-about-page .finwert-work-template .work-shape-2 path,
+    .finwert-about-page .finwert-work-template .work-shape-3 path {
         fill: none;
         stroke: #050048;
         stroke-width: 4;
@@ -586,6 +603,35 @@ require __DIR__ . '/includes/header.php';
 
     .finwert-about-page .finwert-work-template .work-shape-2 {
         transform: translateY(-50%);
+    }
+
+    .finwert-about-page .finwert-work-template .work-shape-3 {
+        position: absolute;
+        z-index: 2;
+    }
+
+    @media (min-width: 1200px) {
+        .finwert-about-page .finwert-work-template .work-shape-1,
+        .finwert-about-page .finwert-work-template .work-shape-2,
+        .finwert-about-page .finwert-work-template .work-shape-3 {
+            display: block !important;
+            top: 120px;
+            width: 72px;
+            height: 44px;
+            transform: translate(-50%, -50%);
+        }
+
+        .finwert-about-page .finwert-work-template .work-shape-1 { left: 25%; }
+        .finwert-about-page .finwert-work-template .work-shape-2 { left: 50%; }
+        .finwert-about-page .finwert-work-template .work-shape-3 { left: 75%; }
+    }
+
+    @media (max-width: 1199px) {
+        .finwert-about-page .finwert-work-template .work-shape-1,
+        .finwert-about-page .finwert-work-template .work-shape-2,
+        .finwert-about-page .finwert-work-template .work-shape-3 {
+            display: none !important;
+        }
     }
 
     .finwert-about-page .vl-account-thumb .content {
@@ -728,6 +774,196 @@ require __DIR__ . '/includes/header.php';
         color: #fff;
     }
 
+    .finwert-about-wheel-section {
+        overflow: hidden;
+        padding: 88px 0;
+        background: #f0f6fc;
+    }
+
+    .finwert-about-wheel-heading {
+        max-width: 680px;
+        margin: 0 auto 24px;
+        text-align: center;
+    }
+
+    .finwert-about-wheel-heading span {
+        display: block;
+        margin-bottom: 12px;
+        color: #147bea;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+    }
+
+    .finwert-about-wheel-heading h2 {
+        margin: 0;
+        color: #071f58;
+        font-size: clamp(28px, 3vw, 42px);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .finwert-about-wheel {
+        position: relative;
+        width: min(680px, 100%);
+        aspect-ratio: 1;
+        margin: 0 auto;
+    }
+
+    .finwert-about-wheel::before {
+        content: "";
+        position: absolute;
+        inset: 9%;
+        border: 2px dashed #9fc8ed;
+        border-radius: 50%;
+        animation: finwert-about-ring-spin 180s linear infinite;
+    }
+
+    @keyframes finwert-about-ring-spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .finwert-about-wheel::after {
+        content: "";
+        position: absolute;
+        inset: 25%;
+        border: 1px dashed #bcd6ee;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .finwert-about-wheel-centre {
+        position: absolute;
+        inset: 33%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #071f58;
+        box-shadow: 0 0 0 12px #e0ebf7;
+        color: #fff;
+        text-align: center;
+    }
+
+    .finwert-about-wheel-centre span {
+        color: #8ec9ff;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .finwert-about-wheel-centre strong {
+        margin: 10px 0;
+        font-size: 32px;
+        line-height: 1.12;
+    }
+
+    .finwert-about-wheel-centre small {
+        color: #c3d8f1;
+        font-size: 10px;
+    }
+
+    .finwert-about-wheel ol {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        animation: finwert-about-ring-spin 180s linear infinite;
+    }
+
+    .finwert-about-wheel li {
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        z-index: 2;
+        display: flex;
+        width: 22%;
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid #d9e7f5;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(23, 54, 91, .06);
+        text-align: center;
+    }
+
+    .finwert-about-wheel li i {
+        color: #147bea;
+        font-size: 24px;
+    }
+
+    .finwert-about-wheel li span {
+        color: #17365b;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .finwert-about-orbit-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        animation: finwert-about-content-counter-spin 180s linear infinite;
+    }
+
+    @keyframes finwert-about-content-counter-spin {
+        to { transform: rotate(-360deg); }
+    }
+
+    .finwert-about-wheel-note {
+        margin: 28px 0 0;
+        color: #597491;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    @media (max-width: 575px) {
+        .finwert-about-wheel-section { padding: 56px 0; }
+        .finwert-about-wheel-heading { margin-bottom: 28px; padding: 0 16px; }
+        .finwert-about-wheel { width: 100%; aspect-ratio: auto; }
+        .finwert-about-wheel::before,
+        .finwert-about-wheel::after { display: none; }
+        .finwert-about-wheel-centre {
+            position: static;
+            margin-bottom: 16px;
+            padding: 24px 16px;
+            border-radius: 12px;
+            box-shadow: none;
+        }
+        .finwert-about-wheel-centre strong { font-size: 28px; }
+        .finwert-about-wheel-centre strong br { display: none; }
+        .finwert-about-wheel ol { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; animation: none; }
+        .finwert-about-wheel li {
+            position: static;
+            width: auto;
+            min-height: 112px;
+            padding: 12px;
+            transform: none;
+            aspect-ratio: auto;
+            border-radius: 12px;
+        }
+        .finwert-about-wheel li i { font-size: 22px; }
+        .finwert-about-orbit-content { animation: none; }
+        .finwert-about-wheel-note { margin-top: 20px; padding: 0 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .finwert-about-wheel::before,
+        .finwert-about-wheel ol,
+        .finwert-about-orbit-content { animation: none; }
+    }
+
     .finwert-about-page .finwert-team-carousel-section {
         background: #bfd2f12e;
     }
@@ -809,6 +1045,112 @@ require __DIR__ . '/includes/header.php';
         margin-top: 0;
     }
     .finwert-about-page .finwert-team-carousel-section .team__wrap7 { cursor: pointer; }
+    .finwert-about-page .finwert-team-grid-section {
+        background: #fff;
+    }
+
+    .finwert-about-page .finwert-team-grid-list {
+        overflow: visible;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 44px 28px;
+        transform: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .swiper-slide {
+        width: auto !important;
+        height: auto;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7 {
+        min-height: 100%;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-thumb-bg {
+        overflow: hidden;
+        border-radius: 12px;
+        background: transparent;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-thumb {
+        height: 300px;
+        background: transparent;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        filter: grayscale(1);
+        transition: filter .3s ease, transform .3s ease;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7:hover img {
+        filter: grayscale(0);
+        transform: scale(1.025);
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-thumb-social,
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-content .icon {
+        display: none;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-content {
+        min-height: 0;
+        margin: 0;
+        padding: 16px 4px 0;
+        background: transparent;
+        text-align: center;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-content .title {
+        margin: 0 0 6px;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .finwert-about-page .finwert-team-grid-list .team__wrap7-content .para {
+        color: #60708a;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
+    @media (max-width: 991px) {
+        .finwert-about-page .finwert-team-grid-list .swiper-wrapper {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 575px) {
+        .finwert-about-page .finwert-team-grid-list .swiper-wrapper {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        .finwert-about-page .finwert-team-grid-list .team__wrap7-thumb {
+            height: 340px;
+        }
+    }
     .finwert-team-modal { display:none; position:fixed; inset:0; z-index:10000; align-items:center; justify-content:center; padding:20px; background:rgba(7,31,88,.78); }
     .finwert-team-modal.is-open { display:flex; }
     .finwert-team-modal-card { position:relative; display:grid; grid-template-columns:minmax(180px,.8fr) 1.2fr; max-width:760px; width:100%; overflow:hidden; border-radius:16px; background:#fff; box-shadow:0 24px 70px rgba(0,0,0,.3); }
@@ -1020,6 +1362,12 @@ require __DIR__ . '/includes/header.php';
                             <path d="M10 30 C40 54 93 52 118 29 M118 29 L104 32 M118 29 L111 43"></path>
                         </svg>
                     </div>
+                    <!-- shape 03 -->
+                    <div class="work-shape-3 d-none d-xl-block">
+                        <svg viewBox="0 0 132 64" aria-hidden="true" focusable="false">
+                            <path d="M10 42 C40 18 93 20 118 43 M118 43 L104 40 M118 43 L111 29"></path>
+                        </svg>
+                    </div>
 
                     <!-- single work -->
                     <div class="single__work7">
@@ -1077,6 +1425,24 @@ require __DIR__ . '/includes/header.php';
                                 data-driven decisions, plan for growth.</p>
                         </div>
                     </div>
+
+                    <!-- single work -->
+                    <div class="single__work7">
+                        <!-- thumb -->
+                        <div class="single__work7-thumb image-anime">
+                            <img src="assets/img/myimage/03_Debt_Fundraising2.jpg" alt="Debt financing strategy and fundraising support">
+                            <!-- number -->
+                            <div class="number">
+                                <span>04</span>
+                            </div>
+                        </div>
+                        <!-- content -->
+                        <div class="single__work7-content">
+                            <h4 class="title">Debt Financing</h4>
+                            <p class="para finwert-copy">We help businesses assess funding requirements, structure suitable debt solutions and connect with the right lending partners.</p>
+                            <p class="para">Our support covers working capital, expansion funding and tailored financing strategies aligned with your repayment capacity.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1084,6 +1450,7 @@ require __DIR__ . '/includes/header.php';
     <!--================= work section End =================-->
 
 
+    <?php /*
     <!--================= Service section start =================-->
     <section class="finwert-benefits-section fix pt-100 pb-100">
         <div class="container">
@@ -1340,6 +1707,36 @@ require __DIR__ . '/includes/header.php';
         </div>
     </section>
     <!--================= Service section End =================-->
+    */ ?>
+
+    <!--================= About strengths section start =================-->
+    <section class="finwert-about-wheel-section" aria-labelledby="finwert-about-wheel-title">
+        <div class="container">
+            <div class="finwert-about-wheel-heading">
+                <span>How We Show Up</span>
+                <h2 id="finwert-about-wheel-title">A better way to work with your finance partner</h2>
+            </div>
+            <div class="finwert-about-wheel">
+                <div class="finwert-about-wheel-centre">
+                    <span>FINWERT</span>
+                    <strong>Our<br>Promise</strong>
+                    <small>Built around your business</small>
+                </div>
+                <ol>
+                    <li style="--x:50%;--y:9%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i><span>Ownership<br>mindset</span></div></li>
+                    <li style="--x:79%;--y:21%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Prompt, clear<br>communication</span></div></li>
+                    <li style="--x:91%;--y:50%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Confidentiality<br>by design</span></div></li>
+                    <li style="--x:79%;--y:79%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-sliders" aria-hidden="true"></i><span>Support shaped<br>to your needs</span></div></li>
+                    <li style="--x:50%;--y:91%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-arrows-up-down-left-right" aria-hidden="true"></i><span>Support that<br>scales with you</span></div></li>
+                    <li style="--x:21%;--y:79%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-compass" aria-hidden="true"></i><span>Practical,<br>actionable advice</span></div></li>
+                    <li style="--x:9%;--y:50%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span>Cross-functional<br>perspective</span></div></li>
+                    <li style="--x:21%;--y:21%"><div class="finwert-about-orbit-content"><i class="fa-solid fa-link" aria-hidden="true"></i><span>Relationships<br>built to last</span></div></li>
+                </ol>
+            </div>
+            <p class="finwert-about-wheel-note">Thoughtful advice, dependable execution and a team that stays accountable.</p>
+        </div>
+    </section>
+    <!--================= About strengths section end =================-->
 
      <!--================= solution section start =================-->
        <!--================= solution section start =================-->
@@ -1448,7 +1845,7 @@ trusted partnerships.</p>
         <!--================= solution section End =================-->
 
     <!--================= Team section start =================-->
-    <section class="vkl-gray-bg-8 finwert-team-carousel-section pt-100 pb-100">
+    <section class="finwert-team-grid-section pt-100 pb-100">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 mx-auto text-center mb-60">
@@ -1464,8 +1861,7 @@ trusted partnerships.</p>
                 </div>
             </div>
 
-            <div class="swiper teamSwiperActive7" data-sal="slide-up" data-sal-duration="1100" data-sal-delay="100"
-                data-sal-easing="ease-in-out">
+            <div class="finwert-team-grid-list">
                 <div class="swiper-wrapper">
                     <!-- single service slide -->
                     <div class="swiper-slide">
@@ -1555,7 +1951,44 @@ trusted partnerships.</p>
                         </div>
                     </div>
                     <!-- single service slide -->
-                    
+                    <?php
+                    $aboutLeadershipTeam = [
+                        ['Tarun Kumar Rawat', 'Head, Central GST / Indirect Taxation', 'A Chartered Accountant with over 7 years of specialized experience in GST compliance, litigation and indirect tax advisory, Tarun leads Finwert\'s central GST function. His work spans departmental audits, GST notices, return filing, refunds, due diligence and GST impact analysis.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/tarun-kumar-rawat-9060aa165/'],
+                        ['CA Rohit Jangid', 'Lead, Finance & CFO Advisory', 'A Chartered Accountant with strong cross-functional expertise, Rohit leads Finwert\'s startup vertical across D2C, fintech and SaaS. His experience spans CFO advisory, cross-border acquisitions, fundraising, investor relations, internal controls, HR and payroll management.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/ca-rohitjangid-b3ab1317b'],
+                        ['Rohit Runthalla', 'Lead, Startup Finance, MIS & Investor Reporting', 'Rohit leads end-to-end corporate finance engagements from Mumbai, focusing on the financial narratives that matter to investors and management. His work connects daily finance operations with the reporting rigor growing companies need.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/rohitrunthala-349ab6a8'],
+                        ['Kapil Pandey', 'Lead, Startup Finance, MIS & Investor Reporting', 'Kapil leads client delivery at Finwert, ensuring engagements are completed on time without compromising accuracy. His expertise in GST, income taxation and MIS reporting brings structure to complex, fast-moving client accounts.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/kapilpandey-122148160'],
+                        ['Shri Ram (Shriram Mundra)', 'Lead, Accounts & MIS', 'A Chartered Accountant leading Accounts, Revenue and MIS engagements from Bengaluru, Shri Ram combines strong financial analysis with effective team leadership across statutory compliance and finance operations.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/shrirammundra'],
+                        ['Yashesh H. Gosher', 'Controllership Lead', 'With over 15 years of experience, including close to a decade at S.R. Batliboi & Associates (EY), Yashesh brings Big Four rigor to accounts, compliance, reporting and finance process automation.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/yasheshgosher-9568a110b'],
+                        ['Nitesh Karwa', 'Head, Company Secretarial & ROC Compliance', 'With close to 11 years of experience as a company secretary and legal manager, Nitesh leads Finwert\'s central CS and ROC function, guiding founders through governance and regulatory requirements.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/niteshkarwa-0751a781'],
+                        ['Hemant Saini', 'Multi-Location Project Lead', 'A Chartered Accountant experienced in managing projects across multiple locations, Hemant brings hands-on expertise in taxation, accounting and company law compliance to diverse client engagements.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/ca-hemantsaini-88b02a169'],
+                        ['Ripen Gala', 'Lead, Finance & CFO Advisory', 'A Chartered Accountant with 7+ years of experience, Ripen supports startups and larger organisations through cross-border finance, fundraising, due diligence, financial modelling and finance automation.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/ripengala-827a2b96'],
+                        ['Megha Agrawal', 'Lead, Taxation & Audit', 'With over 7 years of experience in audit, taxation and financial compliance, Megha leads end-to-end engagements covering ITR filings, assessments, GST and TDS compliance while mentoring a growing team.', 'assets/img/myimage/pepole.png', 'https://www.linkedin.com/in/meghaagrawal-941232139'],
+                    ];
+                    foreach ($aboutLeadershipTeam as [$memberName, $memberRole, $memberBio, $memberImage, $memberLinkedin]):
+                    ?>
+                        <div class="swiper-slide">
+                            <div class="team__wrap7"
+                                data-team-name="<?php echo htmlspecialchars($memberName, ENT_QUOTES, 'UTF-8'); ?>"
+                                data-team-role="<?php echo htmlspecialchars($memberRole, ENT_QUOTES, 'UTF-8'); ?>"
+                                data-team-bio="<?php echo htmlspecialchars($memberBio, ENT_QUOTES, 'UTF-8'); ?>"
+                                data-team-image="<?php echo htmlspecialchars($memberImage, ENT_QUOTES, 'UTF-8'); ?>"
+                                data-team-linkedin="<?php echo htmlspecialchars($memberLinkedin, ENT_QUOTES, 'UTF-8'); ?>">
+                                <div class="team__wrap7-thumb-bg">
+                                    <div class="team__wrap7-thumb">
+                                        <img src="<?php echo htmlspecialchars($memberImage, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($memberName, ENT_QUOTES, 'UTF-8'); ?>">
+                                        <div class="team__wrap7-thumb-social">
+                                            <a href="<?php echo htmlspecialchars($memberLinkedin, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener" aria-label="<?php echo htmlspecialchars($memberName, ENT_QUOTES, 'UTF-8'); ?> on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__wrap7-content">
+                                    <h4 class="title"><a href="team.php"><?php echo htmlspecialchars($memberName, ENT_QUOTES, 'UTF-8'); ?></a></h4>
+                                    <p class="para"><?php echo htmlspecialchars($memberRole, ENT_QUOTES, 'UTF-8'); ?></p>
+                                    <div class="icon"><span><i class="fa-regular fa-plus"></i></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <!-- dot pagination style -->
@@ -1566,49 +1999,122 @@ trusted partnerships.</p>
     </section>
     <!--================= Team section End =================-->
 
-    <div class="finwert-team-modal" id="finwertTeamModal" aria-hidden="true">
-        <div class="finwert-team-modal-card" role="dialog" aria-modal="true" aria-labelledby="finwertTeamModalName">
-            <button class="finwert-team-modal-close" type="button" aria-label="Close profile">&times;</button>
-            <img id="finwertTeamModalImage" src="" alt="">
-            <div class="finwert-team-modal-copy">
-                <h3 id="finwertTeamModalName"></h3>
-                <strong id="finwertTeamModalRole"></strong>
-                <p id="finwertTeamModalBio"></p>
-                <a class="finwert-team-modal-linkedin" id="finwertTeamModalLinkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
+    <dialog class="finwert-profile-dialog" id="teamProfileDialog" aria-labelledby="teamProfileName">
+        <button class="finwert-profile-nav finwert-profile-prev" type="button" aria-label="View previous team member">&#8592;</button>
+        <button class="finwert-profile-nav finwert-profile-next" type="button" aria-label="View next team member">&#8594;</button>
+        <div class="finwert-profile-layout">
+            <button class="finwert-profile-close" type="button" aria-label="Close profile" autofocus>&times;</button>
+            <img class="finwert-profile-photo" alt="">
+            <div class="finwert-profile-copy" aria-live="polite">
+                <h2 id="teamProfileName"></h2>
+                <strong class="finwert-profile-role"></strong>
+                <p class="finwert-profile-motto"></p>
+                <div class="finwert-profile-bio"></div>
+                <p class="finwert-profile-linkedin"></p>
             </div>
         </div>
-    </div>
+    </dialog>
 
 </main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('finwertTeamModal');
-    if (!modal) return;
-    const close = () => { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); };
-    document.querySelectorAll('.finwert-team-carousel-section .team__wrap7').forEach(function (card) {
+    const dialog = document.getElementById('teamProfileDialog');
+    const cards = Array.from(document.querySelectorAll('.finwert-team-grid-section .team__wrap7'));
+    if (!dialog || !cards.length) return;
+
+    let activeProfileIndex = 0;
+    let trigger;
+    let previousOverflow;
+    let touchStartX = 0;
+    const teamMottos = {
+        'Ronak N. Dharnidharka': 'Turn financial complexity into confident decisions.',
+        'Pratik M. Choudhary': 'Strong foundations create sustainable businesses.',
+        'Vikesh Agrawal': 'Plan with purpose. Grow with confidence.',
+        'Tarun Kumar Rawat': 'Clarity in compliance builds lasting trust.',
+        'CA Rohit Jangid': 'Build the right process before scaling the outcome.',
+        'Rohit Runthalla': 'Every number should tell a useful story.',
+        'Kapil Pandey': 'Accuracy, consistency and delivery without compromise.',
+        'Shri Ram (Shriram Mundra)': 'Reliable reporting leads to better decisions.',
+        'Yashesh H. Gosher': 'Simplify the process. Strengthen the control.',
+        'Nitesh Karwa': 'Good governance is the foundation of enduring growth.',
+        'Hemant Saini': 'Own every challenge and deliver with discipline.',
+        'Ripen Gala': 'Automate the routine to focus on what matters.',
+        'Megha Agrawal': 'Compliance done right creates peace of mind.'
+    };
+
+    const showProfile = (index) => {
+        activeProfileIndex = (index + cards.length) % cards.length;
+        const card = cards[activeProfileIndex];
+        const linkedinUrl = card.dataset.teamLinkedin || '#';
+        const linkedinWrap = dialog.querySelector('.finwert-profile-linkedin');
+        const image = dialog.querySelector('.finwert-profile-photo');
+
+        dialog.querySelector('#teamProfileName').textContent = card.dataset.teamName;
+        dialog.querySelector('.finwert-profile-role').textContent = card.dataset.teamRole;
+        dialog.querySelector('.finwert-profile-motto').textContent = teamMottos[card.dataset.teamName] || '';
+        dialog.querySelector('.finwert-profile-bio').replaceChildren();
+        const bio = document.createElement('p');
+        bio.textContent = card.dataset.teamBio;
+        dialog.querySelector('.finwert-profile-bio').appendChild(bio);
+        image.src = card.dataset.teamImage;
+        image.alt = card.dataset.teamName;
+        linkedinWrap.replaceChildren();
+        if (linkedinUrl !== '#') {
+            const link = document.createElement('a');
+            link.href = linkedinUrl;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.setAttribute('aria-label', card.dataset.teamName + ' on LinkedIn');
+            link.innerHTML = '<i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>';
+            linkedinWrap.appendChild(link);
+        }
+    };
+
+    cards.forEach((card, index) => {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', 'View ' + card.dataset.teamName + "'s profile");
+        const openProfile = () => {
+            trigger = card;
+            showProfile(index);
+            previousOverflow = document.body.style.overflow;
+            document.body.style.overflow = 'hidden';
+            dialog.showModal();
+        };
         card.addEventListener('click', function (event) {
             if (event.target.closest('a')) event.preventDefault();
-            document.getElementById('finwertTeamModalName').textContent = card.dataset.teamName;
-            document.getElementById('finwertTeamModalRole').textContent = card.dataset.teamRole;
-            document.getElementById('finwertTeamModalBio').textContent = card.dataset.teamBio;
-            const linkedin = document.getElementById('finwertTeamModalLinkedin');
-            const linkedinUrl = card.dataset.teamLinkedin || '#';
-            linkedin.href = linkedinUrl;
-            linkedin.removeAttribute('target');
-            linkedin.removeAttribute('rel');
-            if (linkedinUrl !== '#') {
-                linkedin.target = '_blank';
-                linkedin.rel = 'noopener';
+            openProfile();
+        });
+        card.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openProfile();
             }
-            const image = document.getElementById('finwertTeamModalImage');
-            image.src = card.dataset.teamImage;
-            image.alt = card.dataset.teamName;
-            modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false');
         });
     });
-    modal.addEventListener('click', function (event) { if (event.target === modal || event.target.closest('.finwert-team-modal-close')) close(); });
-    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') close(); });
+
+    dialog.querySelector('.finwert-profile-prev').addEventListener('click', () => showProfile(activeProfileIndex - 1));
+    dialog.querySelector('.finwert-profile-next').addEventListener('click', () => showProfile(activeProfileIndex + 1));
+    dialog.querySelector('.finwert-profile-close').addEventListener('click', () => dialog.close());
+    dialog.querySelector('.finwert-profile-layout').addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+    dialog.querySelector('.finwert-profile-layout').addEventListener('touchend', (event) => {
+        const distance = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(distance) >= 50) showProfile(activeProfileIndex + (distance < 0 ? 1 : -1));
+    }, { passive: true });
+    dialog.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') showProfile(activeProfileIndex - 1);
+        if (event.key === 'ArrowRight') showProfile(activeProfileIndex + 1);
+    });
+    dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+        document.body.style.overflow = previousOverflow;
+        if (trigger) trigger.focus();
+    });
 });
 </script>
 
