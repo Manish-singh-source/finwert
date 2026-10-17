@@ -1430,7 +1430,7 @@ require __DIR__ . '/includes/header.php';
                     <div class="single__work7">
                         <!-- thumb -->
                         <div class="single__work7-thumb image-anime">
-                            <img src="assets/img/myimage/03_Debt_Fundraising2.jpg" alt="Debt financing strategy and fundraising support">
+                            <img src="assets/img/myimage/03_Debt_Fundraising.jpg" alt="Debt financing strategy and fundraising support">
                             <!-- number -->
                             <div class="number">
                                 <span>04</span>
