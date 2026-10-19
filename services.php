@@ -447,7 +447,7 @@ $serviceLinks = [
                             </div>
 
                             <div class="pannel-contarea">
-                                <h3 class="title"><a href="portfolio-single.html">Small Businesses</a>
+                                <h3 class="title"><a href="#">Small Businesses</a>
                                 <p>For founders and early teams building <br>finance discipline from incorporation onward.</p>
                                 </h3>
                                 <!-- arrow -->
@@ -468,7 +468,7 @@ $serviceLinks = [
                             </div>
 
                             <div class="pannel-contarea">
-                                <h3 class="title"><a href="portfolio-single.html">Mid-Sized Businesses</a>
+                                <h3 class="title"><a href="#">Mid-Sized Businesses</a>
                                 <p>For companies that need stronger MIS, <br>CFO thinking, performance review, and funding readiness.</p>
                                 </h3>
                                 <!-- arrow -->
@@ -490,7 +490,7 @@ $serviceLinks = [
                             </div>
 
                             <div class="pannel-contarea">
-                                <h3 class="title"><a href="portfolio-single.html">Large Enterprises / Corporates</a>
+                                <h3 class="title"><a href="#">Large Enterprises / Corporates</a>
                                 <p>For established businesses working through transactions,<br> capital structure, governance, and strategic finance.</p>
                                 </h3>
                                 <!-- arrow -->
