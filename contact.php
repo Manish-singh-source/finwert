@@ -147,7 +147,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <div class="col-xl-6 mb-30">
                     <div class="contact__maps2">
-                        <iframe title="Finwert Mumbai office map" src="https://www.google.com/maps?q=501%2C%20Antariksh%20Thakur%20House%2C%20Makwana%20Lane%2C%20Marol%2C%20Andheri%20East%2C%20Mumbai%20400059&output=embed" loading="lazy" allowfullscreen></iframe>
+                        <iframe title="Finwert Mumbai office map" src="https://www.google.com/maps/embed/v1/place?q=Antariksh+Thakur+House+104,+Antariksh,+Marol+Naka,+Taluka,+Makwana+Road,+Sir+Mathuradas+Vasanji+Rd,+Marol,+Andheri+East,+Mumbai,+Maharashtra+400059&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" loading="lazy" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,9 @@ require __DIR__ . '/includes/header.php';
 
     <div class="paginacontainer">
         <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0,1,0 0,98 a49,49 0,1,0 0,-98"></path></svg>
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0,1,0 0,98 a49,49 0,1,0 0,-98"></path>
+            </svg>
         </div>
     </div>
 </main>

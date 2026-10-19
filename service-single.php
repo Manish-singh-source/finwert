@@ -10,6 +10,8 @@ $pages = [
     'corporate' => 'service-single-corporate.php',
     'debt-fundraising' => 'service-single-debt-fundraising.php',
     'debt-financing' => 'service-single-debt-fundraising.php',
+    'growth-capital' => 'capital-market-fundraising-services.php',
+    'capital-market' => 'capital-market-fundraising-services.php',
 ];
 $slug = $_GET['service'] ?? '';
 $target = is_string($slug) ? ($pages[$slug] ?? 'services.php') : 'services.php';

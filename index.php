@@ -430,7 +430,7 @@ require __DIR__ . '/includes/header.php';
                             <a href="service-single-debt-fundraising.php">Funding Readiness</a>
                             <a href="service-single-due-diligence.php">Risk Visibility</a>
                             <a href="service-single-tax-advisory.php">Tax Clarity</a>
-                            <a href="service-single-growth-capital.php">Investor Confidence</a>
+                            <a href="capital-market-fundraising-services.php">Investor Confidence</a>
                         </div>
                     </div>
                 </div>
